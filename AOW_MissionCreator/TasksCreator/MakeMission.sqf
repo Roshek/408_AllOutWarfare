@@ -103,8 +103,8 @@ fn_AOW_spawnAssassinateMission = {
 	_Amarker setMarkerSize [1,1];
 
     _Aciv = createGroup civilian;
-    "C_Nikos" createUnit [[(getMarkerpos _Amarker select 0) + random 50 - random 50, (getMarkerpos _Amarker select 1) + random 50 - random 50,0], _Aciv,"AOW_TA1 = this"];
-    AOW_TA1 disableAI "MOVE";
+    "rhs_vdv_officer_armored" createUnit [ [(getMarkerpos _Amarker select 0) + random 50 - random 50, (getMarkerpos _Amarker select 1) + random 50 - random 50,0], _Aciv,"AOW_TA1 = this"];
+    //AOW_TA1 disableAI "MOVE";
 
     if !("Task3" call SHK_Taskmaster_hasTask) then {
     	    ["Task3",localize "str_AOW_Assassinate1",localize "str_AOW_Assassinate2"] call SHK_Taskmaster_add;
@@ -125,7 +125,7 @@ fn_AOW_spawnDestroyMission = {
 	_Dmarker setMarkerText localize "str_AOW_Destroy1";
 	_Dmarker setMarkerSize [1,1];
 
-	_Dveh = ["B_MBT_01_TUSK_F","O_MBT_02_cannon_F","I_MBT_03_cannon_F"] call BIS_fnc_selectRandom;
+	_Dveh = ["rhs_2s3_tv","rhs_t72ba_tv","rhs_t72bb_tv","rhs_t72bc_tv","rhs_t72bd_tv","rhs_t80","rhs_t80a","rhs_t80b","rhs_t80bk","rhs_t80bv","rhs_t80bvk","rhs_t80u","rhs_t80u45m","rhs_t80ue1","rhs_zsu234_aa","rhs_bmd1","rhs_bmd1k","rhs_bmd1p","rhs_bmd1pk","rhs_bmd1r","rhs_bmd2","rhs_bmd2m","rhs_bmd2k","rhs_bmp1_vdv","rhs_bmp1p_vdv","rhs_bmp1k_vdv","rhs_bmp1d_vdv","rhs_prp3_vdv","rhs_bmp2e_vdv","rhs_bmp2_vdv","rhs_bmp2k_vdv","rhs_bmp2d_vdv","rhs_brm1k_vdv","rhs_sprut_vdv","rhs_bmd4_vdv","rhs_bmd4m_vdv","rhs_bmd4ma_vdv","rhs_btr60_vdv","rhs_btr70_vdv","rhs_btr80_vdv","rhs_btr80a_vdv"] call BIS_fnc_selectRandom;
 	AOW_TD1 = createVehicle [_Dveh,[(getMarkerpos _Dmarker select 0) + random 50 - random 50, (getMarkerpos _Dmarker select 1) + random 50 - random 50,0],[], 0, "NONE"];
     AOW_TD1 setVariable["AOW_NoCleanUp",true];
 
@@ -149,8 +149,8 @@ fn_AOW_spawnExtractionMission = {
 	_Emarker setMarkerSize [1,1];
 
     _Eciv = createGroup civilian;
-    "C_man_1" createUnit [[(getMarkerpos _Emarker select 0) + random 50 - random 50, (getMarkerpos _Emarker select 1) + random 50 - random 50,0], _Eciv,"AOW_TE1 = this"];
-    AOW_TE1 disableAI "MOVE";
+    "rhsusf_army_ocp_squadleader" createUnit [ [(getMarkerpos _Emarker select 0) + random 50 - random 50, (getMarkerpos _Emarker select 1) + random 50 - random 50,0], _Eciv,"AOW_TE1 = this"];
+    AOW_TE1 disableAI "ANIM";
 
     if !("Task5" call SHK_Taskmaster_hasTask) then {
     	    ["Task5",localize "str_AOW_Extraction1",localize "str_AOW_Extraction2"] call SHK_Taskmaster_add;
@@ -161,7 +161,7 @@ fn_AOW_spawnExtractionMission = {
     [[AOW_TE1, ["Follow me","[AOW_TE1] join group (_this select 1);",[],6,false,true,"",""]],"AOW_fnc_addAction",true,true] spawn BIS_fnc_MP;
 
     waitUntil {sleep 1; group AOW_TE1 != _Eciv || !(alive AOW_TE1)};
-    AOW_TE1 enableAI "MOVE";
+    AOW_TE1 enableAI "ANIM";
 	if !(alive AOW_TE1) exitWith {deleteMarker "AOW_Extraction1"; ["Task5","failed"] call SHK_Taskmaster_upd;};
 
 	waitUntil {sleep 1; AOW_TE1 distance (markerPos "respawn_west") < 70 || !(alive AOW_TE1)};
@@ -181,7 +181,7 @@ fn_AOW_spawnCaptureMission = {
 	_Cmarker setMarkerText localize "str_AOW_Capture1";
 	_Cmarker setMarkerSize [1,1];
 
-    _Cveh = ["B_MRAP_01_F","I_MRAP_03_F","O_MRAP_02_F"] call BIS_fnc_selectRandom;
+    _Cveh = ["rhs_tigr_3camo_vdv","rhs_tigr_ffv_vdv","rhs_tigr_ffv_3camo_vdv","rhs_tigr_m_test","rhs_uaz_open_vdv","RHS_Ural_VDV_01","RHS_Ural_Open_VDV_01","RHS_BM21_VDV_01","rhs_typhoon_vdv","rhs_gaz66o_vdv"] call BIS_fnc_selectRandom;
     AOW_TC1 = createvehicle [_Cveh,[(getMarkerpos _Cmarker select 0) + random 50 - random 50, (getMarkerpos _Cmarker select 1) + random 50 - random 50,0],[], 0, "NONE"];
     AOW_TC1 setVariable["AOW_NoCleanUp",true];
 
