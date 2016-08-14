@@ -56,7 +56,7 @@ fn_AOW_spawnSabotageMission = {
     _Smarker setMarkerText localize "str_AOW_Sabotage1";
     _Smarker setMarkerSize [1,1];
 
-	_Sveh = ["Land_TTowerBig_2_F","Land_HighVoltageTower_largeCorner_F","Land_TTowerBig_1_F"] call BIS_fnc_selectRandom;
+	_Sveh = ["Land_TTowerSmall_1_F"] call BIS_fnc_selectRandom;
 
 	AOW_TS1 = createVehicle [_Sveh,[(getMarkerpos _Smarker select 0) + random 50 - random 50, (getMarkerpos _Smarker select 1) + random 50 - random 50,0],[], 0, "NONE"];
 
