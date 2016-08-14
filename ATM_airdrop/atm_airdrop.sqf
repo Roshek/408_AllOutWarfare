@@ -44,7 +44,7 @@ private ["_position","_cut","_dialog","_s_alt","_s_alt_text","_sound","_sound2",
 	};
 
 	_target = player;
-	_loadout=[_target] call ATM_Getloadout;
+	_loadout = getUnitLoadout _target;
 
 	_posJump = getMarkerPos "mkr_halo";
 	_a = _posJump select 0;
@@ -76,7 +76,7 @@ while {(getPos _target select 2) > 2} do {
 	};
 	if(!alive _target) then {
 	_target setPos [getPos _target select 0, getPos _target select 1, 0];
-	0=[_target,_loadout] call ATM_Setloadout;
+	_target setUnitLoadout _loadout;
 	};
 };
 
@@ -85,6 +85,6 @@ while {(getPos _target select 2) > 2} do {
 		deletevehicle (_target getvariable "lgtarray"); _target setvariable ["lgtarray",nil,true];
 sleep 2;
 
-	0=[_target,_loadout] call ATM_Setloadout;
+	_target setUnitLoadout _loadout;
 
 hintsilent "";
