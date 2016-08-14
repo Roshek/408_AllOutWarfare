@@ -19,60 +19,6 @@ fnc_alt_onsliderchange =
 	_text ctrlSetText format["%1", round(_value)];
 };
 
-ATM_Getloadout={
-_unit2 = _this select 0;
-_gear = [];
-	_headgear = headgear _unit2;
-	_back_pack = backpack _unit2;
-	_back_pack_items = getItemCargo (unitBackpack _unit2);
-	_back_pack_weap = getWeaponCargo (unitBackpack _unit2);
-	_back_pack_maga = getMagazineCargo (unitBackpack _unit2);
-
-
-	_gear =
-	[
-		_headgear,
-		_back_pack,
-		_back_pack_items,
-		_back_pack_weap,
-		_back_pack_maga
-	];
-	_gear
-
-};
-
-ATM_Setloadout={
-    _unit = _this select 0;
-	_gear = _this select 1;
-	removeheadgear _unit;
-	removeBackpackGlobal _unit;
-	_unit addBackpackGlobal "B_AssaultPack_blk";
-	removeBackpackGlobal _unit;
-	if ((_gear select 1) != "") then {_unit addBackpackGlobal (_gear select 1);clearAllItemsFromBackpack _unit;};
-	if ((_gear select 0) != "") then {_unit addHeadgear (_gear select 0);};
-	if (count ((_gear select 3) select 0) > 0) then
-	{
-		for "_i" from 0 to (count ((_gear select 3) select 0) - 1) do
-		{
-			(unitBackpack _unit) addweaponCargoGlobal [((_gear select 3) select 0) select _i,((_gear select 3) select 1) select _i];
-		};
-	};
-	if (count ((_gear select 4) select 0) > 0) then
-	{
-		for "_i" from 0 to (count ((_gear select 4) select 0) - 1) do
-		{
-			(unitBackpack _unit) addMagazineCargoGlobal [((_gear select 4) select 0) select _i,((_gear select 4) select 1) select _i];
-		};
-	};
-	if (count ((_gear select 2) select 0) > 0) then
-	{
-		for "_i" from 0 to (count ((_gear select 2) select 0) - 1) do
-		{
-			(unitBackpack _unit) addItemCargoGlobal [((_gear select 2) select 0) select _i,((_gear select 2) select 1) select _i];
-		};
-	};
-};
-
 ATM_Frontpack={
 	_pack = unitBackpack _target;
 	_class = typeOf _pack;
