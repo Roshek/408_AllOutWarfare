@@ -29,7 +29,7 @@
 								NOTE: Make sure this is bigger than *maxRange !
 		custom init 		= 	"init commands" (if you want something in init field of units, put it here) 	DEFAULT: nil
 								NOTE: Keep it inside quotes, and if you need quotes in init commands, you MUST
-								use ' or "" instead of ". EXAMPLE: "hint 'this is hint';"
+								use ' or "" instead of ". EXAMPLE: "hint 'this is hint;
 		patrol type			=	1 or array 	(1 = doMove for each unit individually)								DEFAULT: 1
 								array = ["waypointBehaviour","waypointType"] = waypoint for group
 								ex: ["AWARE","SAD"]

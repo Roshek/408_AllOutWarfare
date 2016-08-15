@@ -99,28 +99,6 @@ class MTHI_GUI_7: Cruoriss_RscButton
 	sizeEx = "0.029 / (getResolution select 5)";
      action = "closeDialog 0;_nil=[]ExecVM ""ATM_airdrop\atm_airdrop.sqf""";
 };
-class MTHI_GUI_8: Cruoriss_RscButton
-{
-	idc = -2;
-	text = $STR_AOW_Recruit; //--- ToDo: Localize;
-	x = 0.587772 * safezoneW + safezoneX;
-	y = 0.5 * safezoneH + safezoneY;
-	w = 0.0619568 * safezoneW;
-	h = 0.055 * safezoneH;
-	sizeEx = "0.029 / (getResolution select 5)";
-     action = "closeDialog 0;";
-};
-class MTHI_GUI_10: Cruoriss_RscButton
-{
-	idc = -2;
-	text = $STR_AOW_SATCOM; //--- ToDo: Localize;
-	x = 0.587772 * safezoneW + safezoneX;
-	y = 0.6 * safezoneH + safezoneY;
-	w = 0.0619568 * safezoneW;
-	h = 0.055 * safezoneH;
-	sizeEx = "0.029 / (getResolution select 5)";
-     action = "closeDialog 0;";
-};
 class MTHI_GUI_9: Cruoriss_RscButton
 {
 	idc = -2;

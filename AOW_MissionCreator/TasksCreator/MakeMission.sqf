@@ -102,7 +102,7 @@ fn_AOW_spawnAssassinateMission = {
 	_Amarker setMarkerText localize "str_AOW_Assassinate1";
 	_Amarker setMarkerSize [1,1];
 
-    _Aciv = createGroup civilian;
+    _Aciv = createGroup east;
     "rhs_vdv_officer_armored" createUnit [ [(getMarkerpos _Amarker select 0) + random 50 - random 50, (getMarkerpos _Amarker select 1) + random 50 - random 50,0], _Aciv,"AOW_TA1 = this"];
     //AOW_TA1 disableAI "MOVE";
 
