@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=103;
+		nextID=112;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4.3367476,10.862787,-1.2774341};
-		dir[]={-0.0060870415,-0.99732471,0.072853222};
-		up[]={-0.083039463,0.073067568,0.99386388};
-		aside[]={0.99652803,4.5984052e-009,0.083262183};
+		pos[]={-5.0073414,30.669512,-19.380365};
+		dir[]={0.2574788,-0.78118366,0.56878644};
+		up[]={0.32218394,0.62422019,0.71172291};
+		aside[]={0.91102886,-1.3899989e-007,-0.41240603};
 	};
 };
 binarizationWanted=0;
@@ -378,7 +378,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=41;
+		items=44;
 		class Item0
 		{
 			dataType="Marker";
@@ -557,13 +557,13 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=21;
+				items=6;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={0.5858264,0.0014388561,0.58710939};
+						position[]={-2.5160418,0.0014388561,1.0468018};
 						angles[]={0,6.262835,0};
 					};
 					side="West";
@@ -585,7 +585,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1.7548749,0.0014388561,0.59150392};
+						position[]={-0.58236313,0.0014388561,1.0056975};
 						angles[]={0,0.23184967,0};
 					};
 					side="West";
@@ -605,187 +605,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8.2513523,0.0014388561,0.72675782};
-						angles[]={0,0.18111324,0};
-					};
-					side="West";
-					class Attributes
-					{
-						skill=0.60000002;
-						name="BLUFOR_PLAYER_19";
-						description="REPAIR/MEDIC";
-						isPlayable=1;
-					};
-					id=10;
-					type="B_Soldier_universal_F";
-					atlOffset=185.97;
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7.9014568,0.0014388561,0.75263673};
-						angles[]={0,0.041800499,0};
-					};
-					side="West";
-					class Attributes
-					{
-						skill=0.60000002;
-						name="BLUFOR_PLAYER_18";
-						description="REPAIR/MEDIC";
-						isPlayable=1;
-					};
-					id=12;
-					type="B_Soldier_universal_F";
-					atlOffset=185.97;
-				};
-				class Item4
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={5.4596782,0.0014388561,0.79072267};
-						angles[]={0,0.04396534,0};
-					};
-					side="West";
-					class Attributes
-					{
-						skill=0.60000002;
-						name="BLUFOR_PLAYER_12";
-						description="REPAIR/MEDIC";
-						isPlayable=1;
-					};
-					id=14;
-					type="B_Soldier_universal_F";
-					atlOffset=185.97;
-				};
-				class Item5
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={5.1479392,0.0014388561,0.79267579};
-						angles[]={0,0.050196171,0};
-					};
-					side="West";
-					class Attributes
-					{
-						skill=0.60000002;
-						name="BLUFOR_PLAYER_11";
-						description="REPAIR/MEDIC";
-						isPlayable=1;
-					};
-					id=16;
-					type="B_Soldier_universal_F";
-					atlOffset=185.97;
-				};
-				class Item6
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={3.6887403,0.0014388561,0.72626954};
-						angles[]={0,0.040719032,0};
-					};
-					side="West";
-					class Attributes
-					{
-						skill=0.60000002;
-						name="BLUFOR_PLAYER_7";
-						description="REPAIR/MEDIC";
-						isPlayable=1;
-					};
-					id=18;
-					type="B_Soldier_universal_F";
-					atlOffset=185.97;
-				};
-				class Item7
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4.4149303,0.0014388561,0.75898439};
-						angles[]={0,0.18331194,0};
-					};
-					side="West";
-					class Attributes
-					{
-						skill=0.60000002;
-						name="BLUFOR_PLAYER_9";
-						description="REPAIR/MEDIC";
-						isPlayable=1;
-					};
-					id=20;
-					type="B_Soldier_universal_F";
-					atlOffset=185.97;
-				};
-				class Item8
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4.0710373,0.0014388561,0.75507814};
-						angles[]={0,0.23184967,0};
-					};
-					side="West";
-					class Attributes
-					{
-						skill=0.60000002;
-						name="BLUFOR_PLAYER_8";
-						description="REPAIR/MEDIC";
-						isPlayable=1;
-					};
-					id=25;
-					type="B_Soldier_universal_F";
-					atlOffset=185.97;
-				};
-				class Item9
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={3.2701359,0.0014388561,0.68916017};
-						angles[]={0,0.23184967,0};
-					};
-					side="West";
-					class Attributes
-					{
-						skill=0.60000002;
-						name="BLUFOR_PLAYER_6";
-						description="REPAIR/MEDIC";
-						isPlayable=1;
-					};
-					id=27;
-					type="B_Soldier_universal_F";
-					atlOffset=185.97;
-				};
-				class Item10
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4.8055959,0.0014388561,0.80878907};
-						angles[]={0,0.23184967,0};
-					};
-					side="West";
-					class Attributes
-					{
-						skill=0.60000002;
-						name="BLUFOR_PLAYER_10";
-						description="REPAIR/MEDIC";
-						isPlayable=1;
-					};
-					id=49;
-					type="B_Soldier_universal_F";
-					atlOffset=185.97;
-				};
-				class Item11
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={1.2117321,0.0014388561,0.5470137};
+						position[]={-1.0886946,0.0014388561,-0.61472291};
 						angles[]={0,0.23184967,0};
 					};
 					side="West";
@@ -800,32 +620,12 @@ class Mission
 					type="B_Soldier_universal_F";
 					atlOffset=185.97;
 				};
-				class Item12
+				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8.6189814,0.0014388561,0.66474611};
-						angles[]={0,0.18111324,0};
-					};
-					side="West";
-					class Attributes
-					{
-						skill=0.60000002;
-						name="BLUFOR_PLAYER_20";
-						description="REPAIR/MEDIC";
-						isPlayable=1;
-					};
-					id=73;
-					type="B_Soldier_universal_F";
-					atlOffset=185.97;
-				};
-				class Item13
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={2.1283052,0.0014388561,0.54658204};
+						position[]={0.62273574,0.0014388561,-0.66679877};
 						angles[]={0,0.041800499,0};
 					};
 					side="West";
@@ -840,12 +640,12 @@ class Mission
 					type="B_Soldier_universal_F";
 					atlOffset=185.97;
 				};
-				class Item14
+				class Item4
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2.4815719,0.0014388561,0.53974611};
+						position[]={1.1961076,0.0014388561,0.90651685};
 						angles[]={0,0.04396534,0};
 					};
 					side="West";
@@ -860,52 +660,12 @@ class Mission
 					type="B_Soldier_universal_F";
 					atlOffset=185.97;
 				};
-				class Item15
+				class Item5
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7.5238485,0.0014388561,0.80439454};
-						angles[]={0,0.050196171,0};
-					};
-					side="West";
-					class Attributes
-					{
-						skill=0.60000002;
-						name="BLUFOR_PLAYER_17";
-						description="REPAIR/MEDIC";
-						isPlayable=1;
-					};
-					id=79;
-					type="B_Soldier_universal_F";
-					atlOffset=185.97;
-				};
-				class Item16
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7.0757685,0.0014388561,0.81171876};
-						angles[]={0,0.040719032,0};
-					};
-					side="West";
-					class Attributes
-					{
-						skill=0.60000002;
-						name="BLUFOR_PLAYER_16";
-						description="REPAIR/MEDIC";
-						isPlayable=1;
-					};
-					id=81;
-					type="B_Soldier_universal_F";
-					atlOffset=185.97;
-				};
-				class Item17
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={2.8817203,0.0014388561,0.6232422};
+						position[]={1.7088571,0.0014388561,-1.2889678};
 						angles[]={0,0.18331194,0};
 					};
 					side="West";
@@ -920,72 +680,35 @@ class Mission
 					type="B_Soldier_universal_F";
 					atlOffset=185.97;
 				};
-				class Item18
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={6.650723,0.0014388561,0.82734376};
-						angles[]={0,0.23184967,0};
-					};
-					side="West";
-					class Attributes
-					{
-						skill=0.60000002;
-						name="BLUFOR_PLAYER_15";
-						description="REPAIR/MEDIC";
-						isPlayable=1;
-					};
-					id=85;
-					type="B_Soldier_universal_F";
-					atlOffset=185.97;
-				};
-				class Item19
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={6.2657037,0.0014388561,0.81464845};
-						angles[]={0,0.23184967,0};
-					};
-					side="West";
-					class Attributes
-					{
-						skill=0.60000002;
-						name="BLUFOR_PLAYER_14";
-						description="REPAIR/MEDIC";
-						isPlayable=1;
-					};
-					id=87;
-					type="B_Soldier_universal_F";
-					atlOffset=185.97;
-				};
-				class Item20
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={5.8671618,0.0014388561,0.81953126};
-						angles[]={0,0.23184967,0};
-					};
-					side="West";
-					class Attributes
-					{
-						skill=0.60000002;
-						name="BLUFOR_PLAYER_13";
-						description="REPAIR/MEDIC";
-						isPlayable=1;
-					};
-					id=89;
-					type="B_Soldier_universal_F";
-					atlOffset=185.97;
-				};
 			};
 			class Attributes
 			{
 			};
 			id=5;
 			atlOffset=185.97;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="_this setGroupID [_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Alpha 1";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item6
 		{
@@ -1111,7 +834,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={0.62480152,0.0014388561,1.4325194};
+						position[]={-0.12525606,0.0014388561,4.1749353};
 						angles[]={0,6.2092843,0};
 					};
 					side="East";
@@ -1146,7 +869,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7.4939909,0.0014388561,1.9447265};
+						position[]={6.7439332,0.0014388561,4.6871424};
 						angles[]={0,6.2092843,0};
 					};
 					side="East";
@@ -1181,7 +904,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7.1442547,0.0014388561,1.9076171};
+						position[]={6.394197,0.0014388561,4.650033};
 						angles[]={0,6.2092843,0};
 					};
 					side="East";
@@ -1216,7 +939,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={6.7533908,0.0014388561,1.8773437};
+						position[]={6.0033331,0.0014388561,4.6197596};
 						angles[]={0,6.2092843,0};
 					};
 					side="East";
@@ -1251,7 +974,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4.8490634,0.0014388561,1.7840819};
+						position[]={4.0990057,0.0014388561,4.5264978};
 						angles[]={0,6.2092843,0};
 					};
 					side="East";
@@ -1286,7 +1009,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4.495841,0.0014388561,1.7069335};
+						position[]={3.7457833,0.0014388561,4.4493494};
 						angles[]={0,6.2092843,0};
 					};
 					side="East";
@@ -1321,7 +1044,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4.1373343,0.0014388561,1.6903319};
+						position[]={3.3872766,0.0014388561,4.4327478};
 						angles[]={0,6.2092843,0};
 					};
 					side="East";
@@ -1356,7 +1079,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3.2847071,0.0014388561,1.6322265};
+						position[]={2.5346494,0.0014388561,4.3746424};
 						angles[]={0,6.2092843,0};
 					};
 					side="East";
@@ -1391,7 +1114,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2.8638663,0.0014388561,1.5536132};
+						position[]={2.1138086,0.0014388561,4.2960291};
 						angles[]={0,6.2092843,0};
 					};
 					side="East";
@@ -1426,7 +1149,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2.4933689,0.0014388561,1.5365233};
+						position[]={1.7433112,0.0014388561,4.2789392};
 						angles[]={0,6.2092843,0};
 					};
 					side="East";
@@ -1461,7 +1184,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2.0353892,0.0014388561,1.5145507};
+						position[]={1.2853315,0.0014388561,4.2569666};
 						angles[]={0,6.2092843,0};
 					};
 					side="East";
@@ -1496,7 +1219,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8.7055454,0.0014388561,1.8998046};
+						position[]={7.9554877,0.0014388561,4.6422205};
 						angles[]={0,6.2092843,0};
 					};
 					side="East";
@@ -1531,7 +1254,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8.3203058,0.0014388561,1.905664};
+						position[]={7.5702481,0.0014388561,4.6480799};
 						angles[]={0,6.2092843,0};
 					};
 					side="East";
@@ -1566,7 +1289,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7.906642,0.0014388561,1.9193358};
+						position[]={7.1565843,0.0014388561,4.6617517};
 						angles[]={0,6.2092843,0};
 					};
 					side="East";
@@ -1601,7 +1324,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={6.3729539,0.0014388561,1.843164};
+						position[]={5.6228962,0.0014388561,4.5855799};
 						angles[]={0,6.2092843,0};
 					};
 					side="East";
@@ -1636,7 +1359,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5.9427695,0.0014388561,1.7801757};
+						position[]={5.1927118,0.0014388561,4.5225916};
 						angles[]={0,6.2092843,0};
 					};
 					side="East";
@@ -1671,7 +1394,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5.5500994,0.0014388561,1.7625976};
+						position[]={4.8000417,0.0014388561,4.5050135};
 						angles[]={0,6.2092843,0};
 					};
 					side="East";
@@ -1706,7 +1429,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5.1783657,0.0014388561,1.7767577};
+						position[]={4.428308,0.0014388561,4.5191736};
 						angles[]={0,6.2092843,0};
 					};
 					side="East";
@@ -1741,7 +1464,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3.6883049,0.0014388561,1.6717772};
+						position[]={2.9382472,0.0014388561,4.4141932};
 						angles[]={0,6.2092843,0};
 					};
 					side="East";
@@ -1776,7 +1499,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1.6666627,0.0014388561,1.4842772};
+						position[]={0.916605,0.0014388561,4.2266932};
 						angles[]={0,6.2092843,0};
 					};
 					side="East";
@@ -1811,7 +1534,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1.2227836,0.0014388561,1.4305663};
+						position[]={0.47272587,0.0014388561,4.1729822};
 						angles[]={0,6.2092843,0};
 					};
 					side="East";
@@ -3237,6 +2960,480 @@ class Mission
 					};
 				};
 				nAttributes=4;
+			};
+		};
+		class Item41
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=6;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4.0710373,0.0014388561,0.75507814};
+						angles[]={0,0.23184967,0};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=0.60000002;
+						name="BLUFOR_PLAYER_8";
+						description="REPAIR/MEDIC";
+						isPlayable=1;
+					};
+					id=25;
+					type="B_Soldier_universal_F";
+					atlOffset=185.97;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6.6297722,0.0014388561,0.24294931};
+						angles[]={0,0.04396534,0};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						name="BLUFOR_PLAYER_12";
+						description="REPAIR/MEDIC";
+						isPlayable=1;
+					};
+					id=14;
+					type="B_Soldier_universal_F";
+					atlOffset=185.97;
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5.1515999,0.0014388561,-1.278403};
+						angles[]={0,0.040719032,0};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						name="BLUFOR_PLAYER_7";
+						description="REPAIR/MEDIC";
+						isPlayable=1;
+					};
+					id=18;
+					type="B_Soldier_universal_F";
+					atlOffset=185.97;
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7.2292852,0.0014388561,-1.4824727};
+						angles[]={0,0.18331194,0};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						name="BLUFOR_PLAYER_9";
+						description="REPAIR/MEDIC";
+						isPlayable=1;
+					};
+					id=20;
+					type="B_Soldier_universal_F";
+					atlOffset=185.97;
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5.1308436,0.0014388561,0.68651611};
+						angles[]={0,0.23184967,0};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						name="BLUFOR_PLAYER_10";
+						description="REPAIR/MEDIC";
+						isPlayable=1;
+					};
+					id=49;
+					type="B_Soldier_universal_F";
+					atlOffset=185.97;
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3.4874349,0.0014388561,-1.3468335};
+						angles[]={0,0.23184967,0};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						name="BLUFOR_PLAYER_6";
+						description="REPAIR/MEDIC";
+						isPlayable=1;
+					};
+					id=27;
+					type="B_Soldier_universal_F";
+					atlOffset=185.97;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=103;
+			atlOffset=185.97;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="_this setGroupID [_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Alpha 2";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item42
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=6;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={8.7023573,0.0014388561,0.2361744};
+						angles[]={0,0.23184967,0};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=0.60000002;
+						name="BLUFOR_PLAYER_14";
+						description="REPAIR/MEDIC";
+						isPlayable=1;
+					};
+					id=87;
+					type="B_Soldier_universal_F";
+					atlOffset=185.97;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12.91286,0.0014388561,-0.15839309};
+						angles[]={0,0.041800499,0};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						name="BLUFOR_PLAYER_18";
+						description="REPAIR/MEDIC";
+						isPlayable=1;
+					};
+					id=12;
+					type="B_Soldier_universal_F";
+					atlOffset=185.97;
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10.597304,0.0014388561,-0.13078851};
+						angles[]={0,0.040719032,0};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						name="BLUFOR_PLAYER_16";
+						description="REPAIR/MEDIC";
+						isPlayable=1;
+					};
+					id=81;
+					type="B_Soldier_universal_F";
+					atlOffset=185.97;
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11.495244,0.0014388561,-1.789223};
+						angles[]={0,0.23184967,0};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						name="BLUFOR_PLAYER_13";
+						description="REPAIR/MEDIC";
+						isPlayable=1;
+					};
+					id=89;
+					type="B_Soldier_universal_F";
+					atlOffset=185.97;
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9.5454893,0.0014388561,-1.7169864};
+						angles[]={0,0.050196171,0};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						name="BLUFOR_PLAYER_11";
+						description="REPAIR/MEDIC";
+						isPlayable=1;
+					};
+					id=16;
+					type="B_Soldier_universal_F";
+					atlOffset=185.97;
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13.870052,0.0014388561,-2.1214225};
+						angles[]={0,0.23184967,0};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						name="BLUFOR_PLAYER_15";
+						description="REPAIR/MEDIC";
+						isPlayable=1;
+					};
+					id=85;
+					type="B_Soldier_universal_F";
+					atlOffset=185.97;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=105;
+			atlOffset=185.97;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="_this setGroupID [_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Bravo 1";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item43
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=6;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={16.153383,0.0014388561,-0.81579131};
+						angles[]={0,0.18111324,0};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=0.60000002;
+						name="BLUFOR_PLAYER_20";
+						description="REPAIR/MEDIC";
+						isPlayable=1;
+					};
+					id=73;
+					type="B_Soldier_universal_F";
+					atlOffset=185.97;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={17.516846,0.0014388561,-2.9538739};
+						angles[]={0,0.18111324,0};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						name="BLUFOR_PLAYER_19";
+						description="REPAIR/MEDIC";
+						isPlayable=1;
+					};
+					id=10;
+					type="B_Soldier_universal_F";
+					atlOffset=185.97;
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={15.750203,0.0014388561,-2.4921744};
+						angles[]={0,0.050196171,0};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						name="BLUFOR_PLAYER_17";
+						description="REPAIR/MEDIC";
+						isPlayable=1;
+					};
+					id=79;
+					type="B_Soldier_universal_F";
+					atlOffset=185.97;
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={19.675873,0.0014388561,-1.6845696};
+						angles[]={0,0.18111324,0};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						name="BLUFOR_PLAYER_21";
+						description="REPAIR/MEDIC";
+						isPlayable=1;
+					};
+					id=108;
+					type="B_Soldier_universal_F";
+					atlOffset=185.97;
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={17.909231,0.0014388561,-1.2228701};
+						angles[]={0,0.050196171,0};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						name="BLUFOR_PLAYER_22";
+						description="REPAIR/MEDIC";
+						isPlayable=1;
+					};
+					id=109;
+					type="B_Soldier_universal_F";
+					atlOffset=185.97;
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={19.171486,0.0014388561,-3.4162591};
+						angles[]={0,0.18111324,0};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						name="BLUFOR_PLAYER_23";
+						description="REPAIR/MEDIC";
+						isPlayable=1;
+					};
+					id=111;
+					type="B_Soldier_universal_F";
+					atlOffset=185.97;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=106;
+			atlOffset=185.97;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="_this setGroupID [_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Bravo 2";
+						};
+					};
+				};
+				nAttributes=1;
 			};
 		};
 	};
