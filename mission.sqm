@@ -8,18 +8,18 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=112;
+		nextID=116;
 	};
 	class MarkerIDProvider
 	{
-		nextID=1;
+		nextID=2;
 	};
 	class Camera
 	{
-		pos[]={-5.0073414,30.669512,-19.380365};
-		dir[]={0.2574788,-0.78118366,0.56878644};
-		up[]={0.32218394,0.62422019,0.71172291};
-		aside[]={0.91102886,-1.3899989e-007,-0.41240603};
+		pos[]={15.728077,58.107601,-19.720098};
+		dir[]={0.35103035,-0.81427944,0.46238461};
+		up[]={0.49240613,0.58038378,0.64860702};
+		aside[]={0.79650331,-1.6647391e-007,-0.60468376};
 	};
 };
 binarizationWanted=0;
@@ -70,7 +70,7 @@ randomSeed=5936423;
 class ScenarioData
 {
 	author="Roshek";
-	overviewText="Modified version of Curross' All Out Warfare.    Squad .408";
+	overviewText="Modified version of Cruoriss' All Out Warfare. Squad .408 - v1.3";
 	disabledAI=1;
 	class Header
 	{
@@ -358,8 +358,8 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="408 - All Out Warfare";
-		overviewText="408  Modified All Out Warfare";
+		briefingName="408 - All Out Warfare v1.3";
+		overviewText="408  Modified All Out Warfare v1.3";
 		resistanceWest=0;
 		startWeather=0;
 		startWind=0.099999994;
@@ -378,7 +378,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=44;
+		items=48;
 		class Item0
 		{
 			dataType="Marker";
@@ -563,7 +563,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={-2.5160418,0.0014388561,1.0468018};
+						position[]={-2.516,0.0014388561,1.0469999};
 						angles[]={0,6.262835,0};
 					};
 					side="West";
@@ -571,101 +571,217 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						name="zeus1";
-						description="REPAIR/MEDIC + ZEUS (Y KEY TO USE)";
+						rank="SERGEANT";
+						name="Alpha1";
+						description="Alpha 1 - FTL";
 						isPlayer=1;
 						isPlayable=1;
 					};
 					id=6;
 					type="B_Soldier_universal_F";
 					atlOffset=185.97;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={-0.58236313,0.0014388561,1.0056975};
-						angles[]={0,0.23184967,0};
+						position[]={-0.58200002,0.0014388561,1.006};
+						angles[]={0,0.23184954,0};
 					};
 					side="West";
 					class Attributes
 					{
 						skill=0.60000002;
 						name="BLUFOR_PLAYER_2";
-						description="REPAIR/MEDIC";
+						description="Alpha 1 - Rifleman";
 						isPlayable=1;
 					};
 					id=8;
 					type="B_Soldier_universal_F";
 					atlOffset=185.97;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={-1.0886946,0.0014388561,-0.61472291};
-						angles[]={0,0.23184967,0};
+						position[]={-1.089,0.0014388561,-0.61500001};
+						angles[]={0,0.23184954,0};
 					};
 					side="West";
 					class Attributes
 					{
 						skill=0.60000002;
 						name="BLUFOR_PLAYER_1";
-						description="REPAIR/MEDIC";
+						description="Alpha 1 - Rifleman";
 						isPlayable=1;
 					};
 					id=71;
 					type="B_Soldier_universal_F";
 					atlOffset=185.97;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={0.62273574,0.0014388561,-0.66679877};
-						angles[]={0,0.041800499,0};
+						position[]={0.62300003,0.0014388561,-0.667};
+						angles[]={0,0.041800633,0};
 					};
 					side="West";
 					class Attributes
 					{
 						skill=0.60000002;
 						name="BLUFOR_PLAYER_3";
-						description="REPAIR/MEDIC";
+						description="Alpha 1 - Rifleman";
 						isPlayable=1;
 					};
 					id=75;
 					type="B_Soldier_universal_F";
 					atlOffset=185.97;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item4
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1.1961076,0.0014388561,0.90651685};
-						angles[]={0,0.04396534,0};
+						position[]={1.196,0.0014388561,0.90700001};
+						angles[]={0,0.043964844,0};
 					};
 					side="West";
 					class Attributes
 					{
 						skill=0.60000002;
 						name="BLUFOR_PLAYER_4";
-						description="REPAIR/MEDIC";
+						description="Alpha 1 - Rifleman";
 						isPlayable=1;
 					};
 					id=77;
 					type="B_Soldier_universal_F";
 					atlOffset=185.97;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item5
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1.7088571,0.0014388561,-1.2889678};
+						position[]={1.709,0.0014388561,-1.289};
 						angles[]={0,0.18331194,0};
 					};
 					side="West";
@@ -673,12 +789,35 @@ class Mission
 					{
 						skill=0.60000002;
 						name="BLUFOR_PLAYER_5";
-						description="REPAIR/MEDIC";
+						description="Alpha 1 - Rifleman";
 						isPlayable=1;
 					};
 					id=83;
 					type="B_Soldier_universal_F";
 					atlOffset=185.97;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
@@ -2974,68 +3113,138 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4.0710373,0.0014388561,0.75507814};
-						angles[]={0,0.23184967,0};
+						position[]={4.0710001,0.0014388561,0.755};
+						angles[]={0,0.23184954,0};
 					};
 					side="West";
 					flags=2;
 					class Attributes
 					{
 						skill=0.60000002;
-						name="BLUFOR_PLAYER_8";
-						description="REPAIR/MEDIC";
+						rank="SERGEANT";
+						name="Alpha2";
+						description="Alpha 2 - FTL";
 						isPlayable=1;
 					};
 					id=25;
 					type="B_Soldier_universal_F";
 					atlOffset=185.97;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={6.6297722,0.0014388561,0.24294931};
-						angles[]={0,0.04396534,0};
+						position[]={6.6300001,0.0014388561,0.24300002};
+						angles[]={0,0.043964844,0};
 					};
 					side="West";
 					class Attributes
 					{
 						skill=0.60000002;
 						name="BLUFOR_PLAYER_12";
-						description="REPAIR/MEDIC";
+						description="Alpha 2 - Rifleman";
 						isPlayable=1;
 					};
 					id=14;
 					type="B_Soldier_universal_F";
 					atlOffset=185.97;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5.1515999,0.0014388561,-1.278403};
-						angles[]={0,0.040719032,0};
+						position[]={5.152,0.0014388561,-1.278};
+						angles[]={0,0.040718529,0};
 					};
 					side="West";
 					class Attributes
 					{
 						skill=0.60000002;
 						name="BLUFOR_PLAYER_7";
-						description="REPAIR/MEDIC";
+						description="Alpha 2 - Rifleman";
 						isPlayable=1;
 					};
 					id=18;
 					type="B_Soldier_universal_F";
 					atlOffset=185.97;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7.2292852,0.0014388561,-1.4824727};
+						position[]={7.2290001,0.0014388561,-1.482};
 						angles[]={0,0.18331194,0};
 					};
 					side="West";
@@ -3043,52 +3252,121 @@ class Mission
 					{
 						skill=0.60000002;
 						name="BLUFOR_PLAYER_9";
-						description="REPAIR/MEDIC";
+						description="Alpha 2 - Rifleman";
 						isPlayable=1;
 					};
 					id=20;
 					type="B_Soldier_universal_F";
 					atlOffset=185.97;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item4
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5.1308436,0.0014388561,0.68651611};
-						angles[]={0,0.23184967,0};
+						position[]={5.131,0.0014388561,0.68700004};
+						angles[]={0,0.23184954,0};
 					};
 					side="West";
 					class Attributes
 					{
 						skill=0.60000002;
 						name="BLUFOR_PLAYER_10";
-						description="REPAIR/MEDIC";
+						description="Alpha 2 - Rifleman";
 						isPlayable=1;
 					};
 					id=49;
 					type="B_Soldier_universal_F";
 					atlOffset=185.97;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item5
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3.4874349,0.0014388561,-1.3468335};
-						angles[]={0,0.23184967,0};
+						position[]={3.487,0.0014388561,-1.347};
+						angles[]={0,0.23184954,0};
 					};
 					side="West";
 					class Attributes
 					{
 						skill=0.60000002;
 						name="BLUFOR_PLAYER_6";
-						description="REPAIR/MEDIC";
+						description="Alpha 2 - Rifleman";
 						isPlayable=1;
 					};
 					id=27;
 					type="B_Soldier_universal_F";
 					atlOffset=185.97;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
@@ -3132,121 +3410,260 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8.7023573,0.0014388561,0.2361744};
-						angles[]={0,0.23184967,0};
+						position[]={8.7019997,0.0014388561,0.23600002};
+						angles[]={0,0.23184954,0};
 					};
 					side="West";
 					flags=2;
 					class Attributes
 					{
 						skill=0.60000002;
-						name="BLUFOR_PLAYER_14";
-						description="REPAIR/MEDIC";
+						rank="SERGEANT";
+						name="Bravo1";
+						description="Bravo 1 - FTL";
 						isPlayable=1;
 					};
 					id=87;
 					type="B_Soldier_universal_F";
 					atlOffset=185.97;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={12.91286,0.0014388561,-0.15839309};
-						angles[]={0,0.041800499,0};
+						position[]={12.913,0.0014388561,-0.15799999};
+						angles[]={0,0.041800633,0};
 					};
 					side="West";
 					class Attributes
 					{
 						skill=0.60000002;
 						name="BLUFOR_PLAYER_18";
-						description="REPAIR/MEDIC";
+						description="Bravo 1 - Rifleman";
 						isPlayable=1;
 					};
 					id=12;
 					type="B_Soldier_universal_F";
 					atlOffset=185.97;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10.597304,0.0014388561,-0.13078851};
-						angles[]={0,0.040719032,0};
+						position[]={10.597,0.0014388561,-0.13099998};
+						angles[]={0,0.040718529,0};
 					};
 					side="West";
 					class Attributes
 					{
 						skill=0.60000002;
 						name="BLUFOR_PLAYER_16";
-						description="REPAIR/MEDIC";
+						description="Bravo 1 - Rifleman";
 						isPlayable=1;
 					};
 					id=81;
 					type="B_Soldier_universal_F";
 					atlOffset=185.97;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.02;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11.495244,0.0014388561,-1.789223};
-						angles[]={0,0.23184967,0};
+						position[]={11.495,0.0014388561,-1.789};
+						angles[]={0,0.23184954,0};
 					};
 					side="West";
 					class Attributes
 					{
 						skill=0.60000002;
 						name="BLUFOR_PLAYER_13";
-						description="REPAIR/MEDIC";
+						description="Bravo 1 - Rifleman";
 						isPlayable=1;
 					};
 					id=89;
 					type="B_Soldier_universal_F";
 					atlOffset=185.97;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item4
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9.5454893,0.0014388561,-1.7169864};
-						angles[]={0,0.050196171,0};
+						position[]={9.5450001,0.0014388561,-1.717};
+						angles[]={0,0.050195668,0};
 					};
 					side="West";
 					class Attributes
 					{
 						skill=0.60000002;
 						name="BLUFOR_PLAYER_11";
-						description="REPAIR/MEDIC";
+						description="Bravo 1 - Rifleman";
 						isPlayable=1;
 					};
 					id=16;
 					type="B_Soldier_universal_F";
 					atlOffset=185.97;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item5
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={13.870052,0.0014388561,-2.1214225};
-						angles[]={0,0.23184967,0};
+						position[]={13.87,0.0014388561,-2.1210001};
+						angles[]={0,0.23184954,0};
 					};
 					side="West";
 					class Attributes
 					{
 						skill=0.60000002;
 						name="BLUFOR_PLAYER_15";
-						description="REPAIR/MEDIC";
+						description="Bravo 1 - Rifleman";
 						isPlayable=1;
 					};
 					id=85;
 					type="B_Soldier_universal_F";
 					atlOffset=185.97;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
@@ -3290,121 +3707,260 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={16.153383,0.0014388561,-0.81579131};
-						angles[]={0,0.18111324,0};
+						position[]={16.153,0.0014388561,-0.81599998};
+						angles[]={0,0.18111281,0};
 					};
 					side="West";
 					flags=2;
 					class Attributes
 					{
 						skill=0.60000002;
-						name="BLUFOR_PLAYER_20";
-						description="REPAIR/MEDIC";
+						rank="SERGEANT";
+						name="Bravo2";
+						description="Bravo 2 - FTL";
 						isPlayable=1;
 					};
 					id=73;
 					type="B_Soldier_universal_F";
 					atlOffset=185.97;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={17.516846,0.0014388561,-2.9538739};
-						angles[]={0,0.18111324,0};
+						position[]={17.517,0.0014388561,-2.954};
+						angles[]={0,0.18111281,0};
 					};
 					side="West";
 					class Attributes
 					{
 						skill=0.60000002;
 						name="BLUFOR_PLAYER_19";
-						description="REPAIR/MEDIC";
+						description="Bravo 2 - Rifleman";
 						isPlayable=1;
 					};
 					id=10;
 					type="B_Soldier_universal_F";
 					atlOffset=185.97;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={15.750203,0.0014388561,-2.4921744};
-						angles[]={0,0.050196171,0};
+						position[]={15.75,0.0014388561,-2.4920001};
+						angles[]={0,0.050195668,0};
 					};
 					side="West";
 					class Attributes
 					{
 						skill=0.60000002;
 						name="BLUFOR_PLAYER_17";
-						description="REPAIR/MEDIC";
+						description="Bravo 2 - Rifleman";
 						isPlayable=1;
 					};
 					id=79;
 					type="B_Soldier_universal_F";
 					atlOffset=185.97;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={19.675873,0.0014388561,-1.6845696};
-						angles[]={0,0.18111324,0};
+						position[]={19.676001,0.0014388561,-1.6850001};
+						angles[]={0,0.18111281,0};
 					};
 					side="West";
 					class Attributes
 					{
 						skill=0.60000002;
 						name="BLUFOR_PLAYER_21";
-						description="REPAIR/MEDIC";
+						description="Bravo 2 - Rifleman";
 						isPlayable=1;
 					};
 					id=108;
 					type="B_Soldier_universal_F";
 					atlOffset=185.97;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item4
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={17.909231,0.0014388561,-1.2228701};
-						angles[]={0,0.050196171,0};
+						position[]={17.909,0.0014388561,-1.223};
+						angles[]={0,0.050195668,0};
 					};
 					side="West";
 					class Attributes
 					{
 						skill=0.60000002;
 						name="BLUFOR_PLAYER_22";
-						description="REPAIR/MEDIC";
+						description="Bravo 2 - Rifleman";
 						isPlayable=1;
 					};
 					id=109;
 					type="B_Soldier_universal_F";
 					atlOffset=185.97;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item5
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={19.171486,0.0014388561,-3.4162591};
-						angles[]={0,0.18111324,0};
+						position[]={19.171,0.0014388561,-3.4160001};
+						angles[]={0,0.18111281,0};
 					};
 					side="West";
 					class Attributes
 					{
 						skill=0.60000002;
 						name="BLUFOR_PLAYER_23";
-						description="REPAIR/MEDIC";
+						description="Bravo 2 - Rifleman";
 						isPlayable=1;
 					};
 					id=111;
 					type="B_Soldier_universal_F";
 					atlOffset=185.97;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
@@ -3435,6 +3991,50 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item44
+		{
+			dataType="Marker";
+			position[]={-20.333786,1.5492733e+027,-18.59024};
+			name="MAlpha1";
+			text="A1";
+			type="b_inf";
+			colorName="ColorWEST";
+			id=112;
+			atlOffset=1.5492733e+027;
+		};
+		class Item45
+		{
+			dataType="Marker";
+			position[]={-18.59561,1.4250608e+026,-35.356236};
+			name="MAlpha2";
+			text="A2";
+			type="b_inf";
+			colorName="ColorWEST";
+			id=113;
+			atlOffset=1.4250608e+026;
+		};
+		class Item46
+		{
+			dataType="Marker";
+			position[]={30.901663,9.6279408e+023,-35.425735};
+			name="MBravo2";
+			text="B2";
+			type="b_inf";
+			colorName="ColorBlue";
+			id=114;
+			atlOffset=9.6279408e+023;
+		};
+		class Item47
+		{
+			dataType="Marker";
+			position[]={32.320271,1.5492733e+027,-14.903397};
+			name="MBravo1";
+			text="B1";
+			type="b_inf";
+			colorName="ColorBlue";
+			id=115;
+			atlOffset=1.5492733e+027;
 		};
 	};
 	class Connections

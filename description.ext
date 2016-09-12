@@ -1,5 +1,5 @@
-Author = "Cruoriss";
-OnLoadName = "All Out Warfare";
+Author = "Roshek";
+OnLoadName = "408 - All Out Warfare";
 OnLoadMission = "$STR_AOW_Title";
 loadScreen = "images\Overview.jpg";
 overviewPicture = "images\Overview.jpg";

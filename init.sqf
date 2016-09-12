@@ -5,7 +5,7 @@
 // Disable save/load that breaks scripts
 enableSaving [false, false];
 
-// Be sure that jip players won't have the initial base creation dialog
+// Be sure that jip players wont have the initial base creation dialog
 if (isNil "AOW_can_create_base") then {AOW_can_create_base = true;};
 
 // Custom functions
@@ -14,6 +14,21 @@ call compile preprocessFile "functions.sqf";
 // SHKpos and IEDs
 call compile preprocessfile "SHK_pos\shk_pos_init.sqf";
 [] spawn {call compile preprocessFileLineNumbers "EPD\Ied_Init.sqf";};
+
+
+//Markers
+[] spawn {
+while{not isnull Alpha1} do {"MAlpha1" setmarkerpos getpos Alpha1; sleep 1;};
+};
+[] spawn {
+while{not isnull Alpha2} do {"MAlpha2" setmarkerpos getpos Alpha2; sleep 1;};
+};
+[] spawn {
+while{not isnull Bravo1} do {"MBravo1" setmarkerpos getpos Bravo1; sleep 1;};
+};
+[] spawn {
+while{not isnull Bravo2} do {"MBravo2" setmarkerpos getpos Bravo2; sleep 1;};
+};
 
 
 // Various Scripts
