@@ -6,9 +6,9 @@ overviewPicture = "images\Overview.jpg";
 disabledAI = 1;
 
 // Respawn + Revive
-respawn = 3;
-RespawnDelay = 15;
-respawnTemplates[] = {"MenuPosition","Revive"};
+respawn = 3; //BASE
+RespawnDelay = 120;
+respawnTemplates[] = {"Revive","ace_spectator","Wave","Counter"};
 respawnOnStart = -1;
 reviveDelay = 6;    // The time it takes to revive a unit. Will be halved if you have a Medikit. (Default: 6 seconds.)
 reviveForceRespawnDelay = 3;  // The time it takes to force your respawn while incapacitated. (Default: 3 seconds.)

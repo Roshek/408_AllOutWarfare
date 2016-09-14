@@ -29,7 +29,7 @@
 // =========================================================================================================
 if (!isServer) exitWith {};
 
-// how far opfors should move away if they're under attack
+// how far opfors should move away if theyre under attack
 // set this to 200-300, when using the script in open areas (rural surroundings)
 #define SAFEDIST 75
 
@@ -159,7 +159,7 @@ _getAreaInfo = {
 [] call _getAreaInfo;
 sleep .01;
 
-// unit that's moving
+// unit thats moving
 _obj = _this select 0;
 _npc = _obj;
 // is anybody alive in the group?
@@ -242,7 +242,7 @@ _orgMode = behaviour _npc;
 _orgSpeed = speedmode _npc;
 _speedmode = _orgSpeed;
 
-// set first target to current position (so we'll generate a new one right away)
+// set first target to current position (so well generate a new one right away)
 _currPos = getpos _npc;
 _orgPos = _currPos;
 _orgWatch=[_currPos,50,getDir _npc] call KRON_relPos;
@@ -301,7 +301,7 @@ _initpos = "ORIGINAL";
 if ("RANDOM" in _UCthis) then {_initpos = "RANDOM"};
 if ("RANDOMUP" in _UCthis) then {_initpos = "RANDOMUP"};
 if ("RANDOMDN" in _UCthis) then {_initpos = "RANDOMDN"};
-// don't position groups or vehicles on rooftops
+// dont position groups or vehicles on rooftops
 if ((_initpos!="ORIGINAL") && ((!_isman) || (count _members)>1)) then {_initpos="RANDOMDN"};
 // set behaviour modes (or not)
 _noslow = if ("NOSLOW" in _UCthis) then {"NOSLOW"} else {"SLOW"};
@@ -343,7 +343,7 @@ if (_initpos!="ORIGINAL") then {
 		_npc setUnitPos "up";
 		_currPos = getPos _npc;
 		_onroof = true;
-		_exit=true; // don't patrol if on roof
+		_exit=true; // dont patrol if on roof
 	};
 };
 sleep .01;
@@ -473,7 +473,7 @@ if (_usetrigger!="NOTRIGGER") then {
 	call compile format["%1=false",_flgname];
 	call compile format["KRON_TRGFlag=%1",_trgname];
 	if (isNull KRON_TRGFlag) then {
-		// trigger doesn't exist yet, so create one (make it a bit bigger than the marker, to catch path finding 'excursions' and flanking moves)
+		// trigger doesnt exist yet, so create one (make it a bit bigger than the marker, to catch path finding 'excursions' and flanking moves)
 		call compile format["%1=createTrigger['EmptyDetector',[_centerX,_centerY]];",_trgname];
 		call compile format["_areatrigger = %1",_trgname];
 		call compile format["%1 setTriggerArea[_rangeX*1.5,_rangeY*1.5,markerDir _areaname,true]",_trgname];
@@ -512,7 +512,7 @@ _loop=true;
 _currcycle=_cycle;
 while {_loop} do {
 	sleep .01;
-	// keep track of how long we've been moving towards a destination
+	// keep track of how long weve been moving towards a destination
 	_timeontarget=_timeontarget+_currcycle;
 	_react=_react+_currcycle;
 
@@ -601,7 +601,7 @@ while {_loop} do {
 			_pursue=false;
 		};
 
-		// don't react to new fatalities if less than 60 seconds have passed since the last one
+		// dont react to new fatalities if less than 60 seconds have passed since the last one
 		if ((_react<60) && (_fightmode!="walk")) then {_pursue=false};
 
 		if (_pursue) then	{
@@ -646,7 +646,7 @@ while {_loop} do {
 			_flankPos = [_flankX,_flankY];
 			// final target position
 			_attackPos = _targetPos;
-			// for now we're stepping a bit to the side
+			// for now were stepping a bit to the side
 			_targetPos = _avoidPos;
 
 			if (_nofollow=="NOFOLLOW") then {
@@ -672,7 +672,7 @@ while {_loop} do {
 
 	if !(_newpos) then {
 		// calculate new distance
-		// if we're waiting at a waypoint, no calculating necessary
+		// if were waiting at a waypoint, no calculating necessary
 		if (_waiting<=0) then {
 			// distance to target
 			_dist = [_currPos,_targetPos] call KRON_distancePosSqr;
@@ -686,10 +686,10 @@ while {_loop} do {
 			// is our damage changing (increasing)?
 			_dammchg = abs(_damm - _lastdamm);
 
-			// we're either close enough, seem to be stuck, or are getting damaged, so find a new target
+			// were either close enough, seem to be stuck, or are getting damaged, so find a new target
 			if ((!_swimming) && ((_dist<=_closeenough) || (_totmove<.2) || (_dammchg>0.01) || (_timeontarget>ALERTTIME))) then {_makenewtarget=true;};
 
-			// in 'attack (approach) mode', so follow the flanking path (don't make it too predictable though)
+			// in attack (approach) mode', so follow the flanking path (don't make it too predictable though)
 			if ((_fightmode!="walk") && (_dist<=_closeenough)) then {
 				if ((random 1)<.95) then {
 					if (_flankPos select 0!=0) then {
@@ -716,7 +716,7 @@ while {_loop} do {
 				} else {
 					// re-read marker position/size
 					[] call _getAreaInfo;
-					// find a new target that's not too close to the current position
+					// find a new target thats not too close to the current position
 					_targetPos=_currPos;
 					_tries=0;
 					while {((([_currPos,_targetPos] call KRON_distancePosSqr) < _mindist)) && (_tries<20)} do {

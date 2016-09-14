@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={15.728077,58.107601,-19.720098};
-		dir[]={0.35103035,-0.81427944,0.46238461};
-		up[]={0.49240613,0.58038378,0.64860702};
-		aside[]={0.79650331,-1.6647391e-007,-0.60468376};
+		pos[]={16.834345,60.624321,-16.402264};
+		dir[]={-0.090632983,-0.83409667,0.5442062};
+		up[]={-0.13703522,0.55151755,0.82283169};
+		aside[]={0.98645252,1.1711381e-007,0.16428727};
 	};
 };
 binarizationWanted=0;
@@ -29,13 +29,14 @@ addons[]=
 	"A3_Modules_F",
 	"A3_Modules_F_Curator_Curator",
 	"A3_Data_F_Curator_Characters",
+	"ace_explosives",
 	"A3_Modules_F_Supports"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=4;
+		items=5;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -63,6 +64,13 @@ class AddonsMetaData
 			name="Arma 3 Zeus Update - Main Configuration";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
+		};
+		class Item4
+		{
+			className="ace_explosives";
+			name="ACE3 - Explosives";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
 		};
 	};
 };
@@ -152,7 +160,7 @@ class CustomAttributes
 							"SCALAR"
 						};
 					};
-					value=0;
+					value=1;
 				};
 			};
 		};
@@ -444,7 +452,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={18.106138,0,57.746094};
+				position[]={18.106001,0,57.745998};
 			};
 			name="AOW_Curator_1";
 			init="this setVariable [""showNotification"", false]";
@@ -468,7 +476,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="zeus1";
+							value="alpha1";
 						};
 					};
 				};
@@ -572,7 +580,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						name="Alpha1";
+						name="alpha1";
 						description="Alpha 1 - FTL";
 						isPlayer=1;
 						isPlayable=1;
@@ -854,7 +862,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={33.064938,0,57.040527};
+				position[]={33.064999,0,57.041};
 			};
 			name="AOW_Curator_2";
 			init="this setVariable [""showNotification"", false]";
@@ -878,7 +886,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="zeus2";
+							value="alpha2";
 						};
 					};
 				};
@@ -3122,7 +3130,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						name="Alpha2";
+						name="alpha2";
 						description="Alpha 2 - FTL";
 						isPlayable=1;
 					};
@@ -3419,7 +3427,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						name="Bravo1";
+						name="bravo1";
 						description="Bravo 1 - FTL";
 						isPlayable=1;
 					};
@@ -3716,7 +3724,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						name="Bravo2";
+						name="bravo2";
 						description="Bravo 2 - FTL";
 						isPlayable=1;
 					};

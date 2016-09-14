@@ -16,9 +16,9 @@ if (_usewhitelist) then {
 waitUntil {alive player};
 
 // Disable revive if no revive choosed in parameters
-if (paramsArray select 17 == 1) then {
-	player setVariable ["BIS_revive_disableRevive", true, true];
-};
+//if (paramsArray select 17 == 1) then {
+//	player setVariable ["BIS_revive_disableRevive", true, true];
+//};
 
 // Disable negative score
 player addEventHandler ["HandleRating", { if((_this select 1) < 0) then {0}; }];

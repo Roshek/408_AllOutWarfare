@@ -22,7 +22,7 @@
     DisableMove  Boolean        Issues disableai "move" to all units.
     Stance       Boolean        Issues setunitpos "up" to all units.
     Hide         Array          Hiding does not prevent the units from detecting and engaging enemies.
-                                It's only meant to be used for preventing the units being detected from far away.
+                                Its only meant to be used for preventing the units being detected from far away.
                    Portition    Amount of units to be hidden. Valid values between 0 and 1;
                    Condition    Condition to reveal the hidden units.
     
