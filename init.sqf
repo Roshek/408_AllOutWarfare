@@ -15,6 +15,9 @@ call compile preprocessFile "functions.sqf";
 call compile preprocessfile "SHK_pos\shk_pos_init.sqf";
 [] spawn {call compile preprocessFileLineNumbers "EPD\Ied_Init.sqf";};
 
+//SThud
+STHud_NoSquadBarMode = true;
+STUI_Occlusion = false;
 
 // Various Scripts
 [] execVM "eos\OpenMe.sqf";

@@ -8,66 +8,66 @@ Using orientation of objects: yes
 */
 
 [
-	["Land_HBarrier_5_F",[1.82153,-1.19922,0],179.623,1,0,[0,-0],"","",true,false],
-	["Land_HBarrierBig_F",[1.33423,1.96338,0],0.12775,1,0,[0,0],"","",true,false],
+
+
 	["Land_Noticeboard_F",[1.20337,-2.37451,0],0,1,0,[0,0],"NBAmmo2","",true,false],
-	["Land_HBarrierBig_F",[-2.84229,1.95068,0],0.12775,1,0,[0,0],"","",true,false],
+
 	["Land_Noticeboard_F",[-0.485596,3.58496,0],180,1,0,[0,0],"NBAmmo","",true,false],
 	["FlagPole_F",[1.44824,4.04639,0],180.749,1,0,[0,0],"baseFlagPole","",true,false],
-	["Land_Bench_F",[3.5625,3.75049,0],90,1,0,[-1.00257e-005,2.28182e-006],"","",true,false],
-	["Land_Bench_F",[-3.85425,3.7832,9.53674e-007],90,1,0,[6.44446e-005,0.000380151],"","",true,false],
-	["Land_Bench_F",[-5.89746,3.8042,0],89.9998,1,0,[3.17848e-005,0.00034155],"","",true,false],
-	["Land_HBarrierBig_F",[7.66846,-1.48682,0],0.12775,1,0,[0,0],"","",true,false],
-	["Land_HBarrierBig_F",[-8.73877,-1.70508,0],0.12775,1,0,[0,0],"","",true,false],
-	["Land_HBarrierBig_F",[11.8379,2.25635,0],0.12775,1,0,[0,0],"","",true,false],
-	["Land_TTowerSmall_1_F",[11.6328,3.71924,0],358.169,1,0,[0,-0],"","",true,false],
-	["Land_BC_Basket_F",[8.50562,11.084,0.500047],270.041,1,0,[0,-0],"","",true,false],
-	["Land_HBarrierBig_F",[-13.4312,2.04199,0],0.12775,1,0,[0,0],"","",true,false],
-	["Land_TTowerSmall_1_F",[11.7061,8.61157,-1.79412],134.523,1,0,[0,-0],"","",true,false],
+	
+	
+	
+
+
+
+
+
+
+
 
 	["Sign_Arrow_Blue_F",[-4.48999,13.0586,0],0,1,0,[0,0],"Hrespawn_west","",true,false],
-	["Land_MetalBarrel_empty_F",[8.46826,11.0581,0],45,1,0,[0,0],"","",true,false],
+
 	["Sign_Arrow_Blue_F",[4.85376,13.0596,0],0,1,0,[0,0],"Hrespawn_east","",true,false],
-	["Land_HBarrierBig_F",[12.6006,6.65186,0],269.665,1,0,[0,0],"","",true,false],
-	["Land_BC_Basket_F",[-10.2271,11.0498,0.500047],90.0163,1,0,[0,0],"","",true,false],
-	["Land_HBarrier_1_F",[13.6721,-4.3252,0],49.6317,1,0,[0,0],"","",true,false],
-	["Land_HBarrierBig_F",[-13.6416,5.12305,0],269.665,1,0,[0,0],"","",true,false],
-	["Land_MetalBarrel_empty_F",[-10.2261,11.0444,0],0,1,0,[0,0],"","",true,false],
-	["Land_HBarrier_1_F",[14.886,-3.29395,0],49.6317,1,0,[0,0],"","",true,false],
-	["Land_LampStreet_F",[-13.6575,8.71582,-2.32225],180.093,1,0,[0,0],"","",true,false],
-	["Land_HBarrier_1_F",[16.1038,-2.25684,0],49.6317,1,0,[0,0],"","",true,false],
-	["Land_HBarrier_5_F",[-14.7385,-1.22217,0],179.623,1,0,[0,-0],"","",true,false],
-	["Land_HBarrier_1_F",[17.3167,-1.22656,0],49.6317,1,0,[0,0],"","",true,false],
+
+
+
+
+
+
+
+	
+	
+	
 	["Land_Noticeboard_F",[18.8794,1.021,0],358.322,1,0,[0,0],"NBAmmo4","",true,false],
-	["Land_HBarrierBig_F",[-13.6621,13.8232,0],269.665,1,0,[0,0],"","",true,false],
-	["Land_HBarrierBig_F",[12.5791,15.3521,0],269.665,1,0,[0,0],"","",true,false],
-	["Land_Cargo20_military_green_F",[0.901367,21.167,4.76837e-007],269.827,1,0,[-9.16631e-005,-3.57629e-005],"","",true,false],
-	["Land_Cargo20_military_green_F",[-1.68799,21.1938,-2.38419e-006],269.828,1,0,[-0.000157712,-9.84489e-006],"","",true,false],
-	["Land_Cargo20_military_green_F",[-4.24756,21.1924,-9.53674e-007],269.826,1,0,[0.000424741,0.000120321],"","",true,false],
-	["Land_FieldToilet_F",[8.18652,20.2019,-0.0250211],359.998,1,0,[0.00225773,-0.00123708],"","",true,false],
-	["Land_Cargo20_military_green_F",[5.68433,21.084,-1.43051e-006],269.417,1,0,[0.000309591,7.99733e-006],"","",true,false],
-	["Land_HBarrierBig_F",[-22.0024,2.04199,0],0.12775,1,0,[0,0],"","",true,false],
-	["Land_FieldToilet_F",[-9.35522,20.1057,-1.28746e-005],0.00253028,1,0,[0.00189453,-0.00168505],"","",true,false],
-	["Land_Cargo20_military_green_F",[-6.80542,21.2026,0],269.827,1,0,[1.94985e-005,-5.81726e-006],"","",true,false],
-	["Land_HBarrier_5_F",[-20.3181,-1.25488,0],179.623,1,0,[0,-0],"","",true,false],
-	["Land_FieldToilet_F",[8.18628,22.5022,-0.0249906],180.002,1,0,[0.00156478,-0.00114484],"","",true,false],
+	
+
+
+
+
+
+
+
+	
+
+
+	
 	["Land_Noticeboard_F",[-23.9019,-2.58301,0],91.1067,1,0,[0,0],"NBAmmo3","",true,false],
-	["Land_FieldToilet_F",[-9.35547,22.4058,1.14441e-005],180.002,1,0,[-0.00196763,0.00250384],"","",true,false],
+
 	["Land_Noticeboard_F",[-8.41772,-23.0381,0],180,1,0,[0,0],"NBSupport","",true,false],
-	["Land_LampStreet_F",[12.793,20.5835,0],90.8024,1,0,[0,-0],"","",true,false],
+	
 	["Land_Noticeboard_F",[11.3306,-23.2764,0],180,1,0,[0,0],"NBArmored","",true,false],
-	["Land_HBarrier_3_F",[-8.36694,-26.0854,0],269.367,1,0,[0,0],"","",true,false],
-	["Land_HBarrierBig_F",[-13.6797,22.5264,0],269.665,1,0,[0,0],"","",true,false],
-	["Land_HBarrierBig_F",[12.5615,24.0552,0],269.665,1,0,[0,0],"","",true,false],
-	["Land_HBarrierBig_F",[-1.42139,27.3369,0],0.12775,1,0,[0,0],"","",true,false],
-	["Land_HBarrierBig_F",[-22.0024,17.542,0],0.12775,1,0,[0,0],"","",true,false],
-	["Land_HBarrier_3_F",[11.4583,-26.9658,0],269.367,1,0,[0,0],"","",true,false],
-	["Land_HBarrierBig_F",[9.13647,27.3286,0],0.12775,1,0,[0,0],"","",true,false],
-	["Land_HBarrierBig_F",[-10.1226,27.3887,0],0.12775,1,0,[0,0],"","",true,false],
-	["Land_LampStreet_F",[-22.7153,17.5415,-2.4757],269.892,1,0,[0,0],"","",true,false],
+	
+
+
+
+
+
+
+
+
 	["Sign_Arrow_Blue_F",[26.3513,15.2783,0],0,1,0,[0,0],"HSupport1","",true,false],
 	["Sign_Arrow_Blue_F",[0.960938,-30.4819,0],0,1,0,[0,0],"HVVS2","",true,false],
-	["Land_HBarrierBig_F",[3.97656,30.9976,0],0.12775,1,0,[0,0],"","",true,false],
+
 	["Land_LampStreet_F",[27.1602,-17.7568,0],0.00872534,1,0,[0,0],"","",true,false],
 	["Land_HBarrierBig_F",[-8.30835,-31.0889,0],90,1,0,[0,0],"","",true,false],
 	["Land_Noticeboard_F",[8.80298,31.0469,0],269.344,1,0,[0,0],"NBAmmo5","",true,false],

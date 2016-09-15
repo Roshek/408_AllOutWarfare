@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=193;
+		nextID=194;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7.4306583,68.947365,-45.592083};
-		dir[]={0.033212725,-0.81525654,0.57815295};
-		up[]={0.046758149,0.57905191,0.81394947};
-		aside[]={0.99835783,7.7910954e-008,-0.057351023};
+		pos[]={22.350681,35.167816,8.8959513};
+		dir[]={-0.0065114154,-0.74857384,0.66304207};
+		up[]={-0.0073517137,0.6629914,0.74859023};
+		aside[]={0.99996477,1.4726538e-007,0.0098221134};
 	};
 };
 binarizationWanted=0;
@@ -29,14 +29,16 @@ addons[]=
 	"A3_Modules_F",
 	"A3_Modules_F_Curator_Curator",
 	"A3_Data_F_Curator_Characters",
+	"ace_explosives",
 	"A3_Modules_F_Supports",
-	"cba_main"
+	"cba_main",
+	"ace_optionsmenu"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=5;
+		items=7;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -67,10 +69,24 @@ class AddonsMetaData
 		};
 		class Item4
 		{
+			className="ace_explosives";
+			name="ACE3 - Explosives";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item5
+		{
 			className="cba_main";
 			name="Community Base Addons - Main Component";
 			author="CBA Team";
 			url="https://www.github.com/CBATeam/CBA_A3";
+		};
+		class Item6
+		{
+			className="ace_optionsmenu";
+			name="ACE3 - Options Menu";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
 		};
 	};
 };
@@ -386,7 +402,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=25;
+		items=16;
 		class Item0
 		{
 			dataType="Marker";
@@ -1409,634 +1425,6 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={19.222069,0,41.180664};
-			};
-			name="AOW_Support_All_1";
-			id=90;
-			type="SupportProvider_Virtual_Artillery";
-			atlOffset=185.97;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="SupportProvider_Virtual_Artillery_BIS_SUPP_filter";
-					expression="_this setVariable ['BIS_SUPP_filter',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="Side";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="SupportProvider_Virtual_Artillery_BIS_SUPP_vehicleInit";
-					expression="_this setVariable ['BIS_SUPP_vehicleInit',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="SupportProvider_Virtual_Artillery_BIS_SUPP_vehicles";
-					expression="_this setVariable ['BIS_SUPP_vehicles',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[]";
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="SupportProvider_Virtual_Artillery_BIS_SUPP_cooldown";
-					expression="_this setVariable ['BIS_SUPP_cooldown',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=4;
-			};
-		};
-		class Item9
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={24.359518,0,46.429199};
-			};
-			name="AOW_Support_All";
-			id=91;
-			type="SupportRequester";
-			atlOffset=185.97;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="SupportRequester_BIS_SUPP_limit_UAV";
-					expression="_this setVariable ['BIS_SUPP_limit_UAV',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="-1";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="SupportRequester_BIS_SUPP_custom_HQ";
-					expression="_this setVariable ['BIS_SUPP_custom_HQ',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="SupportRequester_BIS_SUPP_limit_Transport";
-					expression="_this setVariable ['BIS_SUPP_limit_Transport',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="-1";
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="SupportRequester_BIS_SUPP_limit_Drop";
-					expression="_this setVariable ['BIS_SUPP_limit_Drop',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="-1";
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="SupportRequester_BIS_SUPP_limit_CAS_Heli";
-					expression="_this setVariable ['BIS_SUPP_limit_CAS_Heli',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="-1";
-						};
-					};
-				};
-				class Attribute5
-				{
-					property="SupportRequester_BIS_SUPP_limit_Artillery";
-					expression="_this setVariable ['BIS_SUPP_limit_Artillery',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="-1";
-						};
-					};
-				};
-				class Attribute6
-				{
-					property="SupportRequester_BIS_SUPP_limit_CAS_Bombing";
-					expression="_this setVariable ['BIS_SUPP_limit_CAS_Bombing',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="-1";
-						};
-					};
-				};
-				nAttributes=7;
-			};
-		};
-		class Item10
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={22.089712,0,41.515625};
-			};
-			name="AOW_Support_All_2";
-			id=92;
-			type="SupportProvider_Virtual_CAS_Bombing";
-			atlOffset=185.97;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="SupportProvider_Virtual_CAS_Bombing_BIS_SUPP_cooldown";
-					expression="_this setVariable ['BIS_SUPP_cooldown',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="SupportProvider_Virtual_CAS_Bombing_BIS_SUPP_vehicleInit";
-					expression="_this setVariable ['BIS_SUPP_vehicleInit',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="SupportProvider_Virtual_CAS_Bombing_BIS_SUPP_vehicles";
-					expression="_this setVariable ['BIS_SUPP_vehicles',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[]";
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="SupportProvider_Virtual_CAS_Bombing_BIS_SUPP_filter";
-					expression="_this setVariable ['BIS_SUPP_filter',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="Side";
-						};
-					};
-				};
-				nAttributes=4;
-			};
-		};
-		class Item11
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={24.573706,0,41.708008};
-			};
-			name="AOW_Support_All_3";
-			id=93;
-			type="SupportProvider_Virtual_CAS_Heli";
-			atlOffset=185.97;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="SupportProvider_Virtual_CAS_Heli_BIS_SUPP_cooldown";
-					expression="_this setVariable ['BIS_SUPP_cooldown',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="SupportProvider_Virtual_CAS_Heli_BIS_SUPP_vehicleInit";
-					expression="_this setVariable ['BIS_SUPP_vehicleInit',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="SupportProvider_Virtual_CAS_Heli_BIS_SUPP_vehicles";
-					expression="_this setVariable ['BIS_SUPP_vehicles',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[]";
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="SupportProvider_Virtual_CAS_Heli_BIS_SUPP_filter";
-					expression="_this setVariable ['BIS_SUPP_filter',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="Side";
-						};
-					};
-				};
-				nAttributes=4;
-			};
-		};
-		class Item12
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={30.469704,0,41.936035};
-			};
-			name="AOW_Support_All_5";
-			id=94;
-			type="SupportProvider_Virtual_Drop";
-			atlOffset=185.97;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="SupportProvider_Virtual_Drop_BIS_SUPP_cooldown";
-					expression="_this setVariable ['BIS_SUPP_cooldown',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="SupportProvider_Virtual_Drop_BIS_SUPP_vehicleInit";
-					expression="_this setVariable ['BIS_SUPP_vehicleInit',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="SupportProvider_Virtual_Drop_BIS_SUPP_vehicles";
-					expression="_this setVariable ['BIS_SUPP_vehicles',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[]";
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="SupportProvider_Virtual_Drop_BIS_SUPP_filter";
-					expression="_this setVariable ['BIS_SUPP_filter',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="Side";
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="SupportProvider_Virtual_Drop_BIS_SUPP_crateInit";
-					expression="_this setVariable ['BIS_SUPP_crateInit',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[_this, [""<t color='#ff1111'>Virtual Arsenal</t>"",""scripts\arsenal.sqf"",[],6,false,true,"""",""""]],""MHQ_fnc_addAction"",true,true] spawn BIS_fnc_MP;  [[_this, [""<t color='#ff1111'>Loadout Editor (Mod required)</t>"",""userconfig\LEA\loadout.sqf"",[],5.8,false,true,"""",""""]],""MHQ_fnc_addAction"",true,true] spawn BIS_fnc_MP;";
-						};
-					};
-				};
-				nAttributes=5;
-			};
-		};
-		class Item13
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={27.366085,0,41.654297};
-			};
-			name="AOW_Support_All_4";
-			id=95;
-			type="SupportProvider_Virtual_Transport";
-			atlOffset=185.97;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="SupportProvider_Virtual_Transport_BIS_SUPP_filter";
-					expression="_this setVariable ['BIS_SUPP_filter',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="Side";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="SupportProvider_Virtual_Transport_BIS_SUPP_vehicles";
-					expression="_this setVariable ['BIS_SUPP_vehicles',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[]";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="SupportProvider_Virtual_Transport_BIS_SUPP_vehicleInit";
-					expression="_this setVariable ['BIS_SUPP_vehicleInit',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="";
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="SupportProvider_Virtual_Transport_BIS_SUPP_cooldown";
-					expression="_this setVariable ['BIS_SUPP_cooldown',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=4;
-			};
-		};
-		class Item14
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
 				position[]={14.790521,0,32.243164};
 			};
 			name="AOW_Support_Logistic";
@@ -2181,12 +1569,12 @@ class Mission
 				nAttributes=7;
 			};
 		};
-		class Item15
+		class Item9
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={16.285627,0,29.453125};
+				position[]={16.285999,0,29.452999};
 			};
 			name="AOW_Support_Logistic_2";
 			id=97;
@@ -2285,14 +1673,14 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[_this, [""<t color='#ff1111'>Virtual Arsenal</t>"",""scripts\arsenal.sqf"",[],6,false,true,"""",""""]],""MHQ_fnc_addAction"",true,true] spawn BIS_fnc_MP;  [[_this, [""<t color='#ff1111'>Loadout Editor (Mod required)</t>"",""userconfig\LEA\loadout.sqf"",[],5.8,false,true,"""",""""]],""MHQ_fnc_addAction"",true,true] spawn BIS_fnc_MP;";
+							value="_this addAction[""<t color='#ff1111'>Arsenal</t>"", ""scripts\arsenal.sqf""];";
 						};
 					};
 				};
 				nAttributes=5;
 			};
 		};
-		class Item16
+		class Item10
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -2384,432 +1772,7 @@ class Mission
 				nAttributes=4;
 			};
 		};
-		class Item17
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={28.021093,0,30.147949};
-			};
-			name="AOW_Support_Offensive_3";
-			id=99;
-			type="SupportProvider_Virtual_Artillery";
-			atlOffset=185.97;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="SupportProvider_Virtual_Artillery_BIS_SUPP_filter";
-					expression="_this setVariable ['BIS_SUPP_filter',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="Side";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="SupportProvider_Virtual_Artillery_BIS_SUPP_vehicleInit";
-					expression="_this setVariable ['BIS_SUPP_vehicleInit',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="SupportProvider_Virtual_Artillery_BIS_SUPP_vehicles";
-					expression="_this setVariable ['BIS_SUPP_vehicles',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[]";
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="SupportProvider_Virtual_Artillery_BIS_SUPP_cooldown";
-					expression="_this setVariable ['BIS_SUPP_cooldown',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=4;
-			};
-		};
-		class Item18
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={25.361416,0,33.799316};
-			};
-			name="AOW_Support_Offensive";
-			id=100;
-			type="SupportRequester";
-			atlOffset=185.97;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="SupportRequester_BIS_SUPP_limit_UAV";
-					expression="_this setVariable ['BIS_SUPP_limit_UAV',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="-1";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="SupportRequester_BIS_SUPP_custom_HQ";
-					expression="_this setVariable ['BIS_SUPP_custom_HQ',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="SupportRequester_BIS_SUPP_limit_Transport";
-					expression="_this setVariable ['BIS_SUPP_limit_Transport',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="-1";
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="SupportRequester_BIS_SUPP_limit_Drop";
-					expression="_this setVariable ['BIS_SUPP_limit_Drop',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="-1";
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="SupportRequester_BIS_SUPP_limit_CAS_Heli";
-					expression="_this setVariable ['BIS_SUPP_limit_CAS_Heli',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="-1";
-						};
-					};
-				};
-				class Attribute5
-				{
-					property="SupportRequester_BIS_SUPP_limit_Artillery";
-					expression="_this setVariable ['BIS_SUPP_limit_Artillery',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="-1";
-						};
-					};
-				};
-				class Attribute6
-				{
-					property="SupportRequester_BIS_SUPP_limit_CAS_Bombing";
-					expression="_this setVariable ['BIS_SUPP_limit_CAS_Bombing',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="-1";
-						};
-					};
-				};
-				nAttributes=7;
-			};
-		};
-		class Item19
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={25.063591,0,29.509277};
-			};
-			name="AOW_Support_Offensive_2";
-			id=101;
-			type="SupportProvider_Virtual_CAS_Bombing";
-			atlOffset=185.97;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="SupportProvider_Virtual_CAS_Bombing_BIS_SUPP_cooldown";
-					expression="_this setVariable ['BIS_SUPP_cooldown',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="SupportProvider_Virtual_CAS_Bombing_BIS_SUPP_vehicleInit";
-					expression="_this setVariable ['BIS_SUPP_vehicleInit',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="SupportProvider_Virtual_CAS_Bombing_BIS_SUPP_vehicles";
-					expression="_this setVariable ['BIS_SUPP_vehicles',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[]";
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="SupportProvider_Virtual_CAS_Bombing_BIS_SUPP_filter";
-					expression="_this setVariable ['BIS_SUPP_filter',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="Side";
-						};
-					};
-				};
-				nAttributes=4;
-			};
-		};
-		class Item20
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={21.836014,0,29.241699};
-			};
-			name="AOW_Support_Offensive_1";
-			id=102;
-			type="SupportProvider_Virtual_CAS_Heli";
-			atlOffset=185.97;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="SupportProvider_Virtual_CAS_Heli_BIS_SUPP_cooldown";
-					expression="_this setVariable ['BIS_SUPP_cooldown',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="SupportProvider_Virtual_CAS_Heli_BIS_SUPP_vehicleInit";
-					expression="_this setVariable ['BIS_SUPP_vehicleInit',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="SupportProvider_Virtual_CAS_Heli_BIS_SUPP_vehicles";
-					expression="_this setVariable ['BIS_SUPP_vehicles',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[]";
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="SupportProvider_Virtual_CAS_Heli_BIS_SUPP_filter";
-					expression="_this setVariable ['BIS_SUPP_filter',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="Side";
-						};
-					};
-				};
-				nAttributes=4;
-			};
-		};
-		class Item21
+		class Item11
 		{
 			dataType="Group";
 			side="West";
@@ -3106,7 +2069,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item22
+		class Item12
 		{
 			dataType="Group";
 			side="West";
@@ -3403,7 +2366,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item23
+		class Item13
 		{
 			dataType="Group";
 			side="West";
@@ -3657,7 +2620,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item24
+		class Item14
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -3668,21 +2631,55 @@ class Mission
 			type="CBA_main_require";
 			atlOffset=185.97;
 		};
+		class Item15
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={21.932659,0,21.263882};
+			};
+			id=193;
+			type="ACE_moduleAllowConfigExport";
+			atlOffset=185.97;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ACE_moduleAllowConfigExport_allowconfigurationExport";
+					expression="_this setVariable ['allowconfigurationExport',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=10;
+			nextID=2;
 		};
 		class Links
 		{
-			items=10;
+			items=2;
 			class Item0
 			{
 				linkID=0;
-				item0=91;
-				item1=90;
+				item0=98;
+				item1=96;
 				class CustomData
 				{
 					type="Sync";
@@ -3691,88 +2688,8 @@ class Mission
 			class Item1
 			{
 				linkID=1;
-				item0=92;
-				item1=91;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item2
-			{
-				linkID=2;
-				item0=93;
-				item1=91;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item3
-			{
-				linkID=3;
-				item0=95;
-				item1=91;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item4
-			{
-				linkID=4;
-				item0=94;
-				item1=91;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item5
-			{
-				linkID=5;
-				item0=98;
-				item1=96;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item6
-			{
-				linkID=6;
 				item0=97;
 				item1=96;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item7
-			{
-				linkID=7;
-				item0=100;
-				item1=99;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item8
-			{
-				linkID=8;
-				item0=101;
-				item1=100;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item9
-			{
-				linkID=9;
-				item0=102;
-				item1=100;
 				class CustomData
 				{
 					type="Sync";

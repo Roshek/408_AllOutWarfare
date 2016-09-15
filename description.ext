@@ -128,9 +128,9 @@ class AOW_DisableSupport
 // 9
 {
 title = $STR_AOW_Support_requester;
-values[] = {0,1,2,3};
-texts[] = {"Disabled","Only Logistic (Transport/SupplyDrop)","Only Offensive (CAS/Artillery)","All Enabled"};
-default = 3;
+values[] = {0,1};
+texts[] = {"Disabled","Only Logistic (Transport/SupplyDrop)"};
+default = 1;
        };
 class AOW_BlankParam5
 // 10

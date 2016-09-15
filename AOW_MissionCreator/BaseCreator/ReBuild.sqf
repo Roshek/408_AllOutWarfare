@@ -16,7 +16,7 @@ if (getMarkerColor "VVS1" != "") then {// Delete old Base markers if base re loc
 	deleteMarker "Repair_marker";
 };
 
-// Make sure no player can't destroy important base part
+// Make sure no player cant destroy important base part
 if (getMarkerColor "VVS1" == "") then {
 	[[NBCar, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
 	[[NBArmored, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
@@ -138,16 +138,6 @@ switch (paramsArray select 9) do
 	case 1: {
 	AOW_Support_Logistic_1 setPos getPos baseFlagPole;
 	AOW_Support_Logistic_2 setPos getPos baseFlagPole;};
-	case 2: {
-	AOW_Support_Offensive_1 setPos getPos baseFlagPole;
-	AOW_Support_Offensive_2 setPos getPos baseFlagPole;
-	AOW_Support_Offensive_3 setpos getPos HVVS5;};
-	case 3: {
-	AOW_Support_All_1 setpos getPos HVVS5;
-	AOW_Support_All_2 setPos getPos baseFlagPole;
-	AOW_Support_All_3 setPos getPos baseFlagPole;
-	AOW_Support_All_4 setPos getPos baseFlagPole;
-	AOW_Support_All_5 setPos getPos baseFlagPole;};
 };
 
 // Delete helpers used to place markers

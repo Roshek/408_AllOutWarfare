@@ -14,8 +14,6 @@ switch (paramsArray select 9) do
 {
 	case 0: {};
 	case 1: {player synchronizeObjectsAdd [AOW_Support_Logistic];};
-	case 2: {player synchronizeObjectsAdd [AOW_Support_Offensive];};
-	case 3: {player synchronizeObjectsAdd [AOW_Support_All];};
 };
 
 // Use saved loadout if it exist
