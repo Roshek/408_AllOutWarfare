@@ -16,21 +16,6 @@ call compile preprocessfile "SHK_pos\shk_pos_init.sqf";
 [] spawn {call compile preprocessFileLineNumbers "EPD\Ied_Init.sqf";};
 
 
-//Markers
-[] spawn {
-while{not isnull Alpha1} do {"MAlpha1" setmarkerpos getpos Alpha1; sleep 1;};
-};
-[] spawn {
-while{not isnull Alpha2} do {"MAlpha2" setmarkerpos getpos Alpha2; sleep 1;};
-};
-[] spawn {
-while{not isnull Bravo1} do {"MBravo1" setmarkerpos getpos Bravo1; sleep 1;};
-};
-[] spawn {
-while{not isnull Bravo2} do {"MBravo2" setmarkerpos getpos Bravo2; sleep 1;};
-};
-
-
 // Various Scripts
 [] execVM "eos\OpenMe.sqf";
 [] execVM "briefing.sqf";
