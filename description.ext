@@ -112,9 +112,9 @@ class Params
     class AOW_PlayerFatigue
     {// 7
       title = $STR_AOW_Fatigue;
-      values[] = {0,1,2};
-      texts[] = {"No Fatigue / Unlimited Stamina","Normal Fatigue / Normal Stamina","Low fatigue / High Stamina"};
-      default = 2;
+      values[] = {0,1};
+      texts[] = {"Disabled","Enabled"};
+      default = 1;
     };
  class AOW_DamageMultiplier
 // 8

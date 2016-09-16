@@ -19,6 +19,9 @@ call compile preprocessfile "SHK_pos\shk_pos_init.sqf";
 STHud_NoSquadBarMode = true;
 STUI_Occlusion = false;
 
+//AI radio
+enableRadio false;
+
 // Various Scripts
 [] execVM "eos\OpenMe.sqf";
 [] execVM "briefing.sqf";
@@ -28,9 +31,6 @@ STUI_Occlusion = false;
 
 // Dynamic Weather
 if (paramsArray select 3 != 5) then {[] execVM "scripts\randomWeather2.sqf"};
-
-// QuickSilver fatigue
-if (paramsArray select 7 == 2) then {[] execVM "scripts\QS_Fatigue.sqf"};
 
 // Ambiant Combat
 if (paramsArray select 11 != 0) then {[] execVM "LV\useambient.sqf";};

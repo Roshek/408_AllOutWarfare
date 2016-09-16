@@ -17,6 +17,9 @@
       <English>----------------------------------- Time/Weather -----------------------------------</English>
       <French>----------------------------------- Heure/Météo -----------------------------------</French>
     </Key>
+  <Key ID="STR_AOW_Fatigue">
+      <English>Fatigue</English>
+    </Key>
   <Key ID="STR_AOW_Time_AA">
       <English>Time acceleration</English>
       <French>Accélération du temps</French>
@@ -48,10 +51,6 @@
   <Key ID="STR_AOW_Civil_Fact">
       <English>Civilian faction for zone creator</English>
       <French>Faction civil du créateur de zone</French>
-    </Key>
-  <Key ID="STR_AOW_Fatigue">
-      <English>Player fatigue</English>
-      <French>Fatigue du joueur</French>
     </Key>
   <Key ID="STR_AOW_DamageMultiplier">
       <English>Damage multiplier (how much damage enemy infantry take)</English>
