@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=194;
+		nextID=228;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={10.192724,154.55565,25.855572};
-		dir[]={0.24510488,-0.9678697,-0.056184784};
-		up[]={0.94340867,0.25141853,-0.21625513};
-		aside[]={-0.22343305,3.8708095e-008,-0.97472006};
+		pos[]={14655.912,192.88045,16738.541};
+		dir[]={-0.29542616,-0.77017695,-0.56533307};
+		up[]={-0.35670197,0.63784051,-0.6825912};
+		aside[]={-0.88630009,6.146729e-008,0.463155};
 	};
 };
 binarizationWanted=0;
@@ -29,16 +29,13 @@ addons[]=
 	"A3_Modules_F",
 	"A3_Modules_F_Curator_Curator",
 	"A3_Data_F_Curator_Characters",
-	"ace_explosives",
-	"A3_Modules_F_Supports",
-	"cba_main",
-	"ace_optionsmenu"
+	"A3_Modules_F_Supports"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=7;
+		items=4;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -67,34 +64,13 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item4
-		{
-			className="ace_explosives";
-			name="ACE3 - Explosives";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item5
-		{
-			className="cba_main";
-			name="Community Base Addons - Main Component";
-			author="CBA Team";
-			url="https://www.github.com/CBATeam/CBA_A3";
-		};
-		class Item6
-		{
-			className="ace_optionsmenu";
-			name="ACE3 - Options Menu";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
 	};
 };
 randomSeed=5936423;
 class ScenarioData
 {
 	author="Roshek";
-	overviewText="Modified version of Cruoriss' All Out Warfare. Squad .408 - v1.3";
+	overviewText="Modified version of Cruoriss' All Out Warfare. Squad .408 - v1.6";
 	disabledAI=1;
 	class Header
 	{
@@ -382,8 +358,8 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="408 - All Out Warfare v1.3";
-		overviewText="408  Modified All Out Warfare v1.3";
+		briefingName="408 - All Out Warfare v1.6";
+		overviewText="408  Modified All Out Warfare v1.6";
 		resistanceWest=0;
 		startWeather=0;
 		startWind=0.099999994;
@@ -402,7 +378,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=16;
+		items=14;
 		class Item0
 		{
 			dataType="Marker";
@@ -2372,7 +2348,7 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=5;
+				items=6;
 				class Item0
 				{
 					dataType="Object";
@@ -2590,6 +2566,49 @@ class Mission
 						nAttributes=1;
 					};
 				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={15.798962,0.0014388561,-2.7488027};
+						angles[]={0,0.18111281,0};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						name="BLUFOR_PLAYER_24";
+						description="Bravo 2 - Rifleman";
+						isPlayable=1;
+					};
+					id=198;
+					type="B_Soldier_universal_F";
+					atlOffset=185.97;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
 			};
 			class Attributes
 			{
@@ -2614,51 +2633,6 @@ class Mission
 								};
 							};
 							value="Bravo 2";
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item14
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={8.8532085,0,48.703037};
-			};
-			id=192;
-			type="CBA_main_require";
-			atlOffset=185.97;
-		};
-		class Item15
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={21.932659,0,21.263882};
-			};
-			id=193;
-			type="ACE_moduleAllowConfigExport";
-			atlOffset=185.97;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ACE_moduleAllowConfigExport_allowconfigurationExport";
-					expression="_this setVariable ['allowconfigurationExport',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
 						};
 					};
 				};

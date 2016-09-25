@@ -31,13 +31,13 @@ if (!isServer) exitWith {};
 
 // how far opfors should move away if theyre under attack
 // set this to 200-300, when using the script in open areas (rural surroundings)
-#define SAFEDIST 75
+#define SAFEDIST 150
 
 // how close unit has to be to target to generate a new one
-#define CLOSEENOUGH 10
+#define CLOSEENOUGH 50
 
 // how close units have to be to each other to share information
-#define SHAREDIST 100
+#define SHAREDIST 1000
 
 // how long AI units should be in alert mode after initially spotting an enemy
 #define ALERTTIME 180
@@ -551,10 +551,10 @@ while {_loop} do {
 	_currPos = getpos _npc; _currX = _currPos select 0; _currY = _currPos select 1;
 	if (_track=="TRACK") then { _trackername setmarkerpos _currPos; };
 
-	// if the AI is a civilian we don't have to bother checking for enemy encounters
+	// if the AI is a civilian we dont have to bother checking for enemy encounters
 	if ((_issoldier) && ((count _enemies)>0) && !(_exit)) then {
 
-		// if the leader comes across another unit that's either injured or dead, go into combat mode as well.
+		// if the leader comes across another unit thats either injured or dead, go into combat mode as well.
 		// If the other person is still alive, share enemy information.
 		if (_shareinfo=="SHARE") then {
 			_others=_friends-_members-[player];
@@ -746,7 +746,7 @@ while {_loop} do {
 				_npc setSpeedMode _orgSpeed;
 				_newpos=true;
 
-				// if we're waiting at patrol end points then don't create a new target right away. Keep cycling though to check for enemy encounters
+				// if were waiting at patrol end points then dont create a new target right away. Keep cycling though to check for enemy encounters
 				if ((_pause!="NOWAIT") && (_waiting<0)) then {_waiting = (15 + random 20)};
 			};
 		};

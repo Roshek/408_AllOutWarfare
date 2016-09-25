@@ -32,8 +32,6 @@ enableRadio false;
 // Dynamic Weather
 if (paramsArray select 3 != 5) then {[] execVM "scripts\randomWeather2.sqf"};
 
-// Ambiant Combat
-if (paramsArray select 11 != 0) then {[] execVM "LV\useambient.sqf";};
 
 // Init variables
 AOW_Checkbox = false;

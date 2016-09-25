@@ -15,11 +15,6 @@ if (_usewhitelist) then {
 // Safety
 waitUntil {alive player};
 
-// Disable revive if no revive choosed in parameters
-//if (paramsArray select 17 == 1) then {
-//	player setVariable ["BIS_revive_disableRevive", true, true];
-//};
-
 // Disable negative score
 player addEventHandler ["HandleRating", { if((_this select 1) < 0) then {0}; }];
 
@@ -27,10 +22,10 @@ player addEventHandler ["HandleRating", { if((_this select 1) < 0) then {0}; }];
 //player enableSimulation false;
 
 // Player fatigue
-if (paramsArray select 7 == 0) then {
-	player enableFatigue false;
-	player addEventhandler ["Respawn", {player enableFatigue false}];
-};
+//if (paramsArray select 7 == 0) then {
+//	player enableFatigue false;
+//	player addEventhandler ["Respawn", {player enableFatigue false}];
+//};
 
 // BIS dynamic groups player side init
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
@@ -58,7 +53,7 @@ if (!isNil "_respawnloadout") then {
 sleep 1;
 player linkItem "ItemMap";
 // If game just started then create base, if player jip or another player create base then teleport to base
-if (player distance [0,0,0] < 100 && isNil "baseFlagPole") then {
+if (player distance [0,0,0] < 1000 && isNil "baseFlagPole") then {
     waitUntil {!isNil "AOW_base_creation_player"};
     if (AOW_can_create_base && player == AOW_base_creation_player) then {
 		AOW_can_create_base = false;

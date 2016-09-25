@@ -8,7 +8,7 @@ disabledAI = 1;
 // Respawn + Revive
 respawn = 3; //BASE
 RespawnDelay = 30;
-respawnTemplates[] = {"Revive","Wave","Counter"};
+respawnTemplates[] = {"Revive","Wave","Spectator","Count"};
 respawnOnStart = -1;
 reviveDelay = 6;    // The time it takes to revive a unit. Will be halved if you have a Medikit. (Default: 6 seconds.)
 reviveForceRespawnDelay = 3;  // The time it takes to force your respawn while incapacitated. (Default: 3 seconds.)
@@ -141,18 +141,18 @@ texts[] = {""};
 default = -99999;
        };
 class AOW_EnableAmbient
-{// 11
+{// 11 Ambient combat removed
 title = $STR_AOW_EnableAmbient;
-values[] = {0,1,2,3,4};
-texts[] = {"No","Yes (No Mod)","Yes (EASTvsWEST)","Yes (RHS ESCALATION)","Yes (IRON FRONT)"};
+values[] = {0};
+texts[] = {""};
 default = 0;
        };
 class AOW_AIAmbiant
-{// 12
+{// 12 Ambient combat removed
 title = $STR_AOW_AIAmbiant;
-values[] = {3,6,9,12,15,18,21};
-texts[] = {"3","6 groups","9","12","15","18","21"};
-default = 6;
+values[] = {0;
+texts[] = {""};
+default = 0;
        };
 class AOW_UPSMON_param
 {// 13
@@ -169,11 +169,11 @@ texts[] = {"0.1","0.2","0.3","0.4","0.5","0.6","0.7","0.8","0.9","1"};
 default = 4;
        };
 class AOW_AIDistance
-{// 15
+{// 15 AI Caching removed
 title = $STR_AOW_AIDistance;
-values[] = {1000,1500,2000,2500,3000,4000,5000,0};
-texts[] = {"1000","1500 meters","2000","2500","3000","4000","5000","Unlimited (caching disabled)"};
-default = 2000;
+values[] = {0};
+texts[] = {};
+default = 0;
        };
 class AOW_BlankParam3
 {// 16
@@ -183,17 +183,17 @@ texts[] = {""};
 default = -99999;
        };
 class AOW_DisableReviveF
-{// 17
+{// 17 Revive removed
 title = $STR_AOW_DisableReviveF;
-values[] = {0,1};
-texts[] = {"Built in revive","Off (to be used with addon version revive)"};
+values[] = {0};
+texts[] = {""};
 default = 0;
        };
        class AOW_VehiclesCleanUP
-       {// 18
+       {// 18 Vehicle cleanup removed
         title = $STR_AOW_VehiclesCleanUP;
-        values[] = {0,1};
-        texts[] = {"Automaticaly delete empty vehicles far from players","Never delete empty vehicles"};
-        default = 1;
+        values[] = {0};
+        texts[] = {""};
+        default = 0;
        };
 };

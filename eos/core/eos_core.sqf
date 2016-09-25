@@ -28,22 +28,21 @@ _ups = (paramsArray select 13);
 _trig=format ["EOSTrigger%1",_mkr];
 
 if (!_cache) then {
-		_eosActivated = createTrigger ["EmptyDetector",_mPos];
-		_eosActivated setTriggerArea [(_distance+_mkrX),(_distance+_mkrY),_mkrAgl,FALSE];
-		_eosActivated setTriggerActivation ["ANY","PRESENT",true];
-		_eosActivated setTriggerTimeout [1, 1, 1, true];
-		_eosActivated setTriggerStatements ["true","",""];
+	_eosActivated = createTrigger ["EmptyDetector",_mPos];
+	_eosActivated setTriggerArea [(_distance+_mkrX),(_distance+_mkrY),_mkrAgl,FALSE];
+	_eosActivated setTriggerActivation ["ANY","PRESENT",true];
+	_eosActivated setTriggerTimeout [1, 1, 1, true];
+	_eosActivated setTriggerStatements ["true","",""];
+	server setvariable [_trig,_eosActivated];
+} else {
+	_eosActivated=server getvariable _trig;
+};
 
-			server setvariable [_trig,_eosActivated];
-					}else{
-				_eosActivated=server getvariable _trig;
-					};
-
-					_mkr setmarkerAlpha _mAN;
-						if (!(getmarkercolor _mkr == VictoryColor)) then 	//IF MARKER IS GREEN DO NOT CHANGE COLOUR
-							{
-						_mkr setmarkercolor hostileColor;
-							};
+_mkr setmarkerAlpha _mAN;
+if (!(getmarkercolor _mkr == VictoryColor)) then 	//IF MARKER IS GREEN DO NOT CHANGE COLOUR
+{
+	_mkr setmarkercolor hostileColor;
+};
 
 waituntil {triggeractivated _eosActivated};	//WAIT UNTIL PLAYERS IN ZONE
 if (!(getmarkercolor _mkr == "colorblack"))then {
@@ -53,23 +52,25 @@ if (!(getmarkercolor _mkr == "colorblack"))then {
 	for "_counter" from 1 to _aGrps do {
 	if (isnil "_aGrp") then {_aGrp=[];};
 		if (_cache) then {
-				_cacheGrp=format ["HP%1",_counter];
-				_units=_eosActivated getvariable _cacheGrp;
-						_aSize=[_units,_units];
-						_aMin=_aSize select 0;
-							};
-								if (_aMin > 0) then {
-									_aGroup=[[_mkr,true] call SHK_pos,_aSize,_faction,_side] call EOS_fnc_spawngroup;
-									_aGrp set [count _aGrp,_aGroup];
-
-									if (_faction == 3) then {
-										0=[_aGroup,"INFskill",1] call eos_fnc_grouphandlers;
-
-									} else {
-									0=[_aGroup,"INFskill"] call eos_fnc_grouphandlers;
-									0=[_mPos,units _aGroup,_mkrX,0,[0,20],true,true] call shk_fnc_fillhouse;
-												};};
+			_cacheGrp=format ["HP%1",_counter];
+			_units=_eosActivated getvariable _cacheGrp;
+			_aSize=[_units,_units];
+			_aMin=_aSize select 0;
 		};
+		if (_aMin > 0) then {
+			_aGroup=[ [_mkr,true] call SHK_pos,_aSize,_faction,_side] call EOS_fnc_spawngroup;
+			_aGrp set [count _aGrp,_aGroup];
+			if (_faction == 3) then {
+				0=[_aGroup,"INFskill",1] call eos_fnc_grouphandlers;
+			} else {
+				0=[_aGroup,"INFskill"] call eos_fnc_grouphandlers;
+				0=[_mPos,units _aGroup,_mkrX,0,[0,20],false,true] call shk_fnc_fillhouse;
+				{
+					_x = [_x,"SAFE",30, [], -1, "HIGH", false, nearestBuilding (leader _aGroup)] execVM "scripts\HousePatrol.sqf"; 
+				} forEach (units _aGroup);
+			};
+		};
+	};
 
 // SPAWN PATROLS
 	for "_counter" from 1 to _bGrps do {
@@ -112,7 +113,7 @@ if (typename _cGroup != "SCALAR") then {
 						};
 								0=[(_cGroup select 2),"LIGskill"] call eos_fnc_grouphandlers;
 
-								0 = [_CGroup select 2,_mkr] call EOS_fnc_taskpatrol;
+								0 = [leader (_CGroup select 2),_mkr] execVM "scripts\ups.sqf";
 								_cGrp set [count _cGrp,_cGroup];
 							};
 		};
@@ -130,7 +131,7 @@ if (typename _dGroup != "SCALAR") then {
 
 						0=[(_dGroup select 2),"ARMskill"] call eos_fnc_grouphandlers;
 
-							0 = [_dGroup select 2,_mkr] call EOS_fnc_taskpatrol;
+							0 = [leader (_dGroup select 2),_mkr] execVM "scripts\ups.sqf";
 							_dGrp set [count _dGrp,_dGroup]
 						};
 	};
