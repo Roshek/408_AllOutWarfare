@@ -5,10 +5,12 @@ _mkr=(_this select 0);_mPos=markerpos(_this select 0);
 _mkrX=getMarkerSize _mkr select 0;
 _mkrY=getMarkerSize _mkr select 1;
 _mkrAgl=markerDir _mkr;
+
 _a=(_this select 1);_aGrps=_a select 0;_aSize=_a select 1;_aMin=_aSize select 0;
 _b=(_this select 2);_bGrps=_b select 0;_bSize=_b select 1;_bMin=_bSize select 0;
 _c=(_this select 3);_cGrps=_c select 0;_cSize=_c select 1;
 _d=(_this select 4);_dGrps=_d select 0;_eGrps=_d select 1;_fGrps=_d select 2;_fSize=_d select 3;
+
 _settings=(_this select 5);_faction=_settings select 0;_mA=_settings select 1;_distance=_settings select 2;_side=_settings select 3;
 _heightLimit=if (count _settings > 4) then {_settings select 4} else {false};
 _debug=if (count _settings > 5) then {_settings select 5} else {false};
@@ -64,7 +66,7 @@ if (!(getmarkercolor _mkr == "colorblack"))then {
 				0=[_aGroup,"INFskill",1] call eos_fnc_grouphandlers;
 			} else {
 				0=[_aGroup,"INFskill"] call eos_fnc_grouphandlers;
-				0=[_mPos,units _aGroup,_mkrX,0,[0,20],false,true] call shk_fnc_fillhouse;
+				//0=[_mPos,units _aGroup,_mkrX,0,[0,20],false,true] call shk_fnc_fillhouse;
 				{
 					_x = [_x,"SAFE",30, [], -1, "HIGH", false, nearestBuilding (leader _aGroup)] execVM "scripts\HousePatrol.sqf"; 
 				} forEach (units _aGroup);
@@ -136,17 +138,30 @@ if (typename _dGroup != "SCALAR") then {
 						};
 	};
 
-//SPAWN STATIC PLACEMENTS
+/* =============SPAWN STATIC PLACEMENTS ===========
 	for "_counter" from 1 to _eGrps do {
-		if (isnil "_eGrp") then {_eGrp=[];};
+		if (isnil "_eGrp") then { _eGrp=[]; };
 		_newpos=[_mkr,50,1] call EOS_fnc_findSafePos;
 		if (surfaceisWater _newpos) exitwith {};
-					_eGroup=[_newpos,_side,_faction,5]call EOS_fnc_spawnvehicle;
+		_eGroup=[_newpos,_side,_faction,5]call EOS_fnc_spawnvehicle;
+		if (typename _eGroup != "SCALAR") then {
+			0=[(_eGroup select 2),"STAskill"] call eos_fnc_grouphandlers;
+			_eGrp set [count _eGrp,_eGroup];
+		};
+	};
+====================================================*/
 
-if (typename _eGroup != "SCALAR") then {
 
-						0=[(_eGroup select 2),"STAskill"] call eos_fnc_grouphandlers;
-							_eGrp set [count _eGrp,_eGroup];
+// SPAWN STATIC HOUSE PATROLS
+	for "_counter" from 1 to _eGrps do {
+	if (isnil "_eGrp") then {_eGrp=[];};
+		_eGroup=[ [_mkr,true] call SHK_pos,[1,1],_faction,_side] call EOS_fnc_spawngroup;
+		_eGrp set [count _eGrp,_eGroup];
+		if (_faction == 3) then {
+			0=[_eGroup,"INFskill",1] call eos_fnc_grouphandlers;
+		} else {
+			0=[_eGroup,"INFskill"] call eos_fnc_grouphandlers;
+			0=[_mPos,units _eGroup,_mkrX,0,[0,20],false,true] call shk_fnc_fillhouse;
 		};
 	};
 
@@ -239,13 +254,13 @@ if (_debug) then {player sidechat format ["ID:c%1",_dGrps];};};
 
 // CACHE MORTARS
 	if (!isnil "_eGrp") then
-				{
-						{	_vehicle = _x select 0;_crew = _x select 1;_grp = _x select 2;
-									if (!alive _vehicle || {!alive _x} foreach _crew) then {_eGrps= _eGrps - 1;};
-														{deleteVehicle _x} forEach (_crew);
-															if (!(vehicle player == _vehicle)) then {{deleteVehicle _x} forEach[_vehicle];};
-																	{deleteVehicle _x} foreach units _grp;deleteGroup _grp;
-						}foreach _eGrp;};
+				{		_n=0;
+						{	_n=_n+1;_units={alive _x} count units _x;_cacheGrp=format ["SP%1",_n];
+	if (_debug) then{player sidechat format ["ID:%1,cache - %2",_cacheGrp,_units];};
+						_eosActivated setvariable [_cacheGrp,_units];
+						{deleteVehicle _x} foreach units _x;deleteGroup _x;
+						}foreach _eGrp;
+				};
 
 // CACHE HELICOPTER TRANSPORT
 	if (!isnil "_fGrp") then
