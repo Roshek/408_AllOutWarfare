@@ -17,7 +17,7 @@ _d=(_this select 4);_dGrps=_d select 0;_eGrps=_d select 1;_fGrps=_d select 2;_fS
 _settings=(_this select 5);_faction=_settings select 0;_mA=_settings select 1;_distance=_settings select 2;_side=_settings select 3;
 _heightLimit=if (count _settings > 4) then {_settings select 4} else {false};
 _debug=if (count _settings > 5) then {_settings select 5} else {false};
-_cache= if (count _this > 6) then {_this select 6} else {false};
+_cache= false;
 _ups = (paramsArray select 13);
 
 	if (_side==EAST) then {_enemyFaction="east";_civZone=false;};
@@ -213,7 +213,7 @@ while {_eosAct} do
 	if (!triggeractivated _eosActivated || getmarkercolor _mkr == "colorblack") exitwith
 		{
 		if (_debug) then {if (!(getmarkercolor _mkr == "colorblack")) then {hint "Restarting Zone AND deleting units";}else{hint "EOS zone deactivated";};};
-//CACHE LIGHT VEHICLES
+/*CACHE LIGHT VEHICLES
 	if (!isnil "_cGrp") then
 				{
 						{	_vehicle = _x select 0;_crew = _x select 1;_grp = _x select 2;
@@ -255,15 +255,26 @@ if (_debug) then {player sidechat format ["ID:c%1",_dGrps];};};
 						}foreach _aGrp;
 				};
 
-// CACHE MORTARS
-	if (!isnil "_eGrp") then
-				{
-						{	_vehicle = _x select 0;_crew = _x select 1;_grp = _x select 2;
-									if (!alive _vehicle || {!alive _x} foreach _crew) then {_eGrps= _eGrps - 1;};
-														{deleteVehicle _x} forEach (_crew);
-															if (!(vehicle player == _vehicle)) then {{deleteVehicle _x} forEach[_vehicle];};
-																	{deleteVehicle _x} foreach units _grp;deleteGroup _grp;
-						}foreach _eGrp;};
+// CACHE HOUSE INFANTRY
+	if (!isnil "_aGrp") then
+				{		_n=0;
+						{	_n=_n+1;_units={alive _x} count units _x;_cacheGrp=format ["HP%1",_n];
+	if (_debug) then{player sidechat format ["ID:%1,cache - %2",_cacheGrp,_units];};
+						_eosActivated setvariable [_cacheGrp,_units];
+						{deleteVehicle _x} foreach units _x;deleteGroup _x;
+						}foreach _aGrp;
+				};
+
+ ================CACHE MORTARS==================
+	if (!isnil "_eGrp") then {
+		{ _vehicle = _x select 0;_crew = _x select 1;_grp = _x select 2;
+					if (!alive _vehicle || {!alive _x} foreach _crew) then {_eGrps= _eGrps - 1;};
+										{deleteVehicle _x} forEach (_crew);
+											if (!(vehicle player == _vehicle)) then {{deleteVehicle _x} forEach[_vehicle];};
+													{deleteVehicle _x} foreach units _grp;deleteGroup _grp;
+		} foreach _eGrp;
+	};
+================================================
 
 // CACHE HELICOPTER TRANSPORT
 	if (!isnil "_fGrp") then
@@ -296,7 +307,7 @@ if (_debug) then {hint "Zone Cached";};
 											_mkr setmarkerAlpha _mAN;
 											if (_debug) then {hint "Zone Captured";};
 											};
-				sleep 1;};
+				sleep 1;};*/
 // PLAYER LEFT ZONE
 _eosAct=false;
 			};sleep 0.5;};
