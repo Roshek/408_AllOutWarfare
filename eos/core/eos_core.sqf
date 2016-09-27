@@ -69,7 +69,7 @@ if (!(getmarkercolor _mkr == "colorblack"))then {
 				0=[_aGroup,"INFskill",1] call eos_fnc_grouphandlers;
 			} else {
 				0=[_aGroup,"INFskill"] call eos_fnc_grouphandlers;
-				0=[_mPos,units _aGroup,_mkrX,0,[0,20],false,true] call shk_fnc_fillhouse;
+				//0=[_mPos,units _aGroup,_mkrX,0,[0,20],false,true] call shk_fnc_fillhouse;
 				{
 					_x = [_x,"SAFE",30, [], -1, "HIGH", false, nearestBuilding (leader _aGroup)] execVM "scripts\HousePatrol.sqf"; 
 				} forEach (units _aGroup);
