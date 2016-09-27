@@ -162,6 +162,16 @@ _index_zone_static_7 = lbAdd [4707, "7"];
 _index_zone_static_8 = lbAdd [4707, "8"];
 _index_zone_static_9 = lbAdd [4707, "9"];
 _index_zone_static_10 = lbAdd [4707, "10"];
+_index_zone_static_11 = lbAdd [4707, "11"];
+_index_zone_static_12 = lbAdd [4707, "12"];
+_index_zone_static_13 = lbAdd [4707, "13"];
+_index_zone_static_14 = lbAdd [4707, "14"];
+_index_zone_static_15 = lbAdd [4707, "15"];
+_index_zone_static_16 = lbAdd [4707, "16"];
+_index_zone_static_17 = lbAdd [4707, "17"];
+_index_zone_static_18 = lbAdd [4707, "18"];
+_index_zone_static_19 = lbAdd [4707, "19"];
+_index_zone_static_20 = lbAdd [4707, "20"];
 lbSetCurSel [4707, _oldAIS];
 
 // AI Heli
