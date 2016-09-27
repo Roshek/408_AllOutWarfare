@@ -6,9 +6,6 @@ _mkrX=getMarkerSize _mkr select 0;
 _mkrY=getMarkerSize _mkr select 1;
 _mkrAgl=markerDir _mkr;
 
-// [ [ [_markerName],[_AIb,_AIbs],[_AIp,_AIps],[_AIm,2],[_AIa],[_AIs],[_AIh,0],[_enemy,_visibility,0,_side,FALSE,FALSE]], "EOS_Spawn",false,false] call BIS_fnc_MP;
-// [_x,[_HPpatrols,_HPgroupArray],[_PApatrols,_PAgroupArray],[_LVehGroups,_LVgroupArray],[_AVehGroups,_SVehGroups,_CHGroups,_CHgroupArray],_settings]
-
 _a=(_this select 1);_aGrps=_a select 0;_aSize=_a select 1;_aMin=_aSize select 0;
 _b=(_this select 2);_bGrps=_b select 0;_bSize=_b select 1;_bMin=_bSize select 0;
 _c=(_this select 3);_cGrps=_c select 0;_cSize=_c select 1;
@@ -257,13 +254,13 @@ if (_debug) then {player sidechat format ["ID:c%1",_dGrps];};};
 
 // CACHE MORTARS
 	if (!isnil "_eGrp") then
-				{
-						{	_vehicle = _x select 0;_crew = _x select 1;_grp = _x select 2;
-									if (!alive _vehicle || {!alive _x} foreach _crew) then {_eGrps= _eGrps - 1;};
-														{deleteVehicle _x} forEach (_crew);
-															if (!(vehicle player == _vehicle)) then {{deleteVehicle _x} forEach[_vehicle];};
-																	{deleteVehicle _x} foreach units _grp;deleteGroup _grp;
-						}foreach _eGrp;};
+				{		_n=0;
+						{	_n=_n+1;_units={alive _x} count units _x;_cacheGrp=format ["SP%1",_n];
+	if (_debug) then{player sidechat format ["ID:%1,cache - %2",_cacheGrp,_units];};
+						_eosActivated setvariable [_cacheGrp,_units];
+						{deleteVehicle _x} foreach units _x;deleteGroup _x;
+						}foreach _eGrp;
+				};
 
 // CACHE HELICOPTER TRANSPORT
 	if (!isnil "_fGrp") then
