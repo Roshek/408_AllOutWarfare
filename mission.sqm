@@ -1649,7 +1649,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="_this addAction[""<t color='#ff1111'>Arsenal</t>"", ""scripts\arsenal.sqf""];";
+							value="[[_this, [localize ""str_AOW_Menu_Ammo1"",""scripts\arsenal.sqf"",[],6,false,true,"""",""""]],""AOW_fnc_addAction"",true,true] spawn BIS_fnc_MP;";
 						};
 					};
 				};
