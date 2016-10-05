@@ -70,7 +70,7 @@ randomSeed=5936423;
 class ScenarioData
 {
 	author="Roshek";
-	overviewText="Modified version of Cruoriss' All Out Warfare. Squad .408 - v1.6";
+	overviewText="Modified version of Cruoriss' All Out Warfare. Squad .408 - v1.61";
 	disabledAI=1;
 	class Header
 	{
@@ -358,8 +358,8 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="408 - All Out Warfare v1.6";
-		overviewText="408  Modified All Out Warfare v1.6";
+		briefingName="408 - All Out Warfare v1.61";
+		overviewText="408  Modified All Out Warfare v1.61";
 		resistanceWest=0;
 		startWeather=0;
 		startWind=0.099999994;
