@@ -9,4 +9,8 @@ while {true} do {
         AOW_Curator_2 addCuratorEditableObjects [allUnits,true];
         AOW_Curator_2 addCuratorEditableObjects [vehicles,true];
     };
+        if (!isnil "zeus2") then {
+        AOW_Curator_3 addCuratorEditableObjects [allUnits,true];
+        AOW_Curator_3 addCuratorEditableObjects [vehicles,true];
+    };
 };
