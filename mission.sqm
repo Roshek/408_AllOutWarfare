@@ -1,4 +1,4 @@
-version=52;
+version=53;
 class EditorData
 {
 	moveGridStep=1;
@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=228;
+		nextID=230;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={14655.912,192.88045,16738.541};
-		dir[]={-0.29542616,-0.77017695,-0.56533307};
-		up[]={-0.35670197,0.63784051,-0.6825912};
-		aside[]={-0.88630009,6.146729e-008,0.463155};
+		pos[]={14894.976,306.66229,16758.309};
+		dir[]={0.48220474,-0.39670655,0.78117865};
+		up[]={0.20839342,0.91793025,0.33760038};
+		aside[]={0.85099322,7.2323019e-007,-0.52530068};
 	};
 };
 binarizationWanted=0;
@@ -28,7 +28,7 @@ addons[]=
 	"A3_Ui_F",
 	"A3_Modules_F",
 	"A3_Modules_F_Curator_Curator",
-	"A3_Data_F_Curator_Characters",
+	"A3_Characters_F",
 	"A3_Modules_F_Supports"
 };
 class AddonsMetaData
@@ -41,28 +41,28 @@ class AddonsMetaData
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item1
 		{
 			className="A3_Modules_F";
 			name="Arma 3 Alpha - Scripted Modules";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item2
 		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item3
 		{
-			className="A3_Data_F_Curator";
-			name="Arma 3 Zeus Update - Main Configuration";
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -70,8 +70,11 @@ randomSeed=5936423;
 class ScenarioData
 {
 	author="Roshek";
-	overviewText="Modified version of Cruoriss' All Out Warfare. Squad .408 - v1.61";
+	overviewText="Modified version of Cruoriss' All Out Warfare. Squad .408 - v1.71";
 	disabledAI=1;
+	respawn=3;
+	respawnDelay=40.975803;
+	respawnVehicleDelay=40.975803;
 	class Header
 	{
 		gameType="Sandbox";
@@ -99,7 +102,7 @@ class CustomAttributes
 					};
 					class value
 					{
-						items=1;
+						items=2;
 						class Item0
 						{
 							class data
@@ -111,7 +114,21 @@ class CustomAttributes
 										"STRING"
 									};
 								};
-								value="None";
+								value="MenuPosition";
+							};
+						};
+						class Item1
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Counter";
 							};
 						};
 					};
@@ -152,7 +169,7 @@ class CustomAttributes
 							"SCALAR"
 						};
 					};
-					value=0;
+					value=1;
 				};
 			};
 		};
@@ -247,7 +264,7 @@ class CustomAttributes
 							"SCALAR"
 						};
 					};
-					value=3.4261832;
+					value=3.8845692;
 				};
 			};
 		};
@@ -266,7 +283,7 @@ class CustomAttributes
 							"SCALAR"
 						};
 					};
-					value=60.864445;
+					value=270.82315;
 				};
 			};
 		};
@@ -358,8 +375,8 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="408 - All Out Warfare v1.61";
-		overviewText="408  Modified All Out Warfare v1.61";
+		briefingName="408 - All Out Warfare v1.70";
+		overviewText="408  Modified All Out Warfare v1.71";
 		resistanceWest=0;
 		startWeather=0;
 		startWind=0.099999994;
@@ -572,6 +589,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
+						init="[west, alpha1] call BIS_fnc_addRespawnPosition;";
 						name="alpha1";
 						description="Alpha 1 - FTL";
 						isPlayer=1;
@@ -583,6 +601,25 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male12ENG";
+								};
+							};
+						};
+						class Attribute1
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -601,7 +638,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						nAttributes=2;
 					};
 				};
 				class Item1
@@ -616,6 +653,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						init="[west, BLUFOR_PLAYER_2] call BIS_fnc_addRespawnPosition;";
 						name="BLUFOR_PLAYER_2";
 						description="Alpha 1 - Rifleman";
 						isPlayable=1;
@@ -626,6 +664,25 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male06ENG";
+								};
+							};
+						};
+						class Attribute1
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -644,7 +701,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						nAttributes=2;
 					};
 				};
 				class Item2
@@ -659,6 +716,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						init="[west, BLUFOR_PLAYER_1] call BIS_fnc_addRespawnPosition;";
 						name="BLUFOR_PLAYER_1";
 						description="Alpha 1 - Rifleman";
 						isPlayable=1;
@@ -669,6 +727,25 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male11ENG";
+								};
+							};
+						};
+						class Attribute1
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -687,7 +764,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						nAttributes=2;
 					};
 				};
 				class Item3
@@ -702,6 +779,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						init="[west, BLUFOR_PLAYER_3] call BIS_fnc_addRespawnPosition;";
 						name="BLUFOR_PLAYER_3";
 						description="Alpha 1 - Rifleman";
 						isPlayable=1;
@@ -712,6 +790,25 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male03ENG";
+								};
+							};
+						};
+						class Attribute1
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -730,7 +827,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						nAttributes=2;
 					};
 				};
 				class Item4
@@ -745,6 +842,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						init="[west, BLUFOR_PLAYER_4] call BIS_fnc_addRespawnPosition;";
 						name="BLUFOR_PLAYER_4";
 						description="Alpha 1 - Rifleman";
 						isPlayable=1;
@@ -755,6 +853,25 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male06ENG";
+								};
+							};
+						};
+						class Attribute1
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -773,7 +890,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						nAttributes=2;
 					};
 				};
 				class Item5
@@ -788,6 +905,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						init="[west, BLUFOR_PLAYER_5] call BIS_fnc_addRespawnPosition;";
 						name="BLUFOR_PLAYER_5";
 						description="Alpha 1 - Rifleman";
 						isPlayable=1;
@@ -798,6 +916,25 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male04ENG";
+								};
+							};
+						};
+						class Attribute1
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -816,7 +953,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						nAttributes=2;
 					};
 				};
 			};
@@ -1760,7 +1897,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4.0710001,0.0014388561,0.75499994};
+						position[]={4.0710001,0.0014388561,0.755};
 						angles[]={0,0.23184954,0};
 					};
 					side="West";
@@ -1769,6 +1906,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
+						init="[west, alpha2] call BIS_fnc_addRespawnPosition;";
 						name="alpha2";
 						description="Alpha 2 - FTL";
 						isPlayable=1;
@@ -1779,6 +1917,25 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male06ENG";
+								};
+							};
+						};
+						class Attribute1
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -1797,7 +1954,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						nAttributes=2;
 					};
 				};
 				class Item1
@@ -1805,13 +1962,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={6.6300001,0.0014388561,0.24300009};
+						position[]={6.6300001,0.0014388561,0.24300002};
 						angles[]={0,0.043964844,0};
 					};
 					side="West";
 					class Attributes
 					{
 						skill=0.60000002;
+						init="[west, BLUFOR_PLAYER_12] call BIS_fnc_addRespawnPosition;";
 						name="BLUFOR_PLAYER_12";
 						description="Alpha 2 - Rifleman";
 						isPlayable=1;
@@ -1822,6 +1980,25 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male10ENG";
+								};
+							};
+						};
+						class Attribute1
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -1840,7 +2017,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						nAttributes=2;
 					};
 				};
 				class Item2
@@ -1848,13 +2025,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5.152,0.0014388561,-1.278};
+						position[]={5.152,0.0014388561,-1.2779999};
 						angles[]={0,0.040718529,0};
 					};
 					side="West";
 					class Attributes
 					{
 						skill=0.60000002;
+						init="[west, BLUFOR_PLAYER_7] call BIS_fnc_addRespawnPosition;";
 						name="BLUFOR_PLAYER_7";
 						description="Alpha 2 - Rifleman";
 						isPlayable=1;
@@ -1866,6 +2044,25 @@ class Mission
 					{
 						class Attribute0
 						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
 							property="pitch";
 							expression="_this setpitch _value;";
 							class Value
@@ -1883,7 +2080,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						nAttributes=2;
 					};
 				};
 				class Item3
@@ -1891,13 +2088,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7.2290001,0.0014388561,-1.482};
+						position[]={7.2290001,0.0014388561,-1.4819999};
 						angles[]={0,0.18331194,0};
 					};
 					side="West";
 					class Attributes
 					{
 						skill=0.60000002;
+						init="[west, BLUFOR_PLAYER_9] call BIS_fnc_addRespawnPosition;";
 						name="BLUFOR_PLAYER_9";
 						description="Alpha 2 - Rifleman";
 						isPlayable=1;
@@ -1909,8 +2107,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="pitch";
-							expression="_this setpitch _value;";
+							property="speaker";
+							expression="_this setspeaker _value;";
 							class Value
 							{
 								class data
@@ -1919,38 +2117,14 @@ class Mission
 									{
 										type[]=
 										{
-											"SCALAR"
+											"STRING"
 										};
 									};
-									value=1.04;
+									value="Male01ENG";
 								};
 							};
 						};
-						nAttributes=1;
-					};
-				};
-				class Item4
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={5.131,0.0014388561,0.6870001};
-						angles[]={0,0.23184954,0};
-					};
-					side="West";
-					class Attributes
-					{
-						skill=0.60000002;
-						name="BLUFOR_PLAYER_10";
-						description="Alpha 2 - Rifleman";
-						isPlayable=1;
-					};
-					id=49;
-					type="B_Soldier_universal_F";
-					atlOffset=185.97;
-					class CustomAttributes
-					{
-						class Attribute0
+						class Attribute1
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -1969,7 +2143,70 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						nAttributes=2;
+					};
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5.131,0.0014388561,0.68700004};
+						angles[]={0,0.23184954,0};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="[west, BLUFOR_PLAYER_10] call BIS_fnc_addRespawnPosition;";
+						name="BLUFOR_PLAYER_10";
+						description="Alpha 2 - Rifleman";
+						isPlayable=1;
+					};
+					id=49;
+					type="B_Soldier_universal_F";
+					atlOffset=185.97;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male09ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						nAttributes=2;
 					};
 				};
 				class Item5
@@ -1977,13 +2214,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3.487,0.0014388561,-1.3470002};
+						position[]={3.487,0.0014388561,-1.3469999};
 						angles[]={0,0.23184954,0};
 					};
 					side="West";
 					class Attributes
 					{
 						skill=0.60000002;
+						init="[west, BLUFOR_PLAYER_6] call BIS_fnc_addRespawnPosition;";
 						name="BLUFOR_PLAYER_6";
 						description="Alpha 2 - Rifleman";
 						isPlayable=1;
@@ -1994,6 +2232,25 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male11ENG";
+								};
+							};
+						};
+						class Attribute1
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -2012,7 +2269,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						nAttributes=2;
 					};
 				};
 			};
@@ -2066,6 +2323,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
+						init="[west, bravo1] call BIS_fnc_addRespawnPosition;";
 						name="bravo1";
 						description="Bravo 1 - FTL";
 						isPlayable=1;
@@ -2076,6 +2334,25 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male06ENG";
+								};
+							};
+						};
+						class Attribute1
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -2094,7 +2371,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						nAttributes=2;
 					};
 				};
 				class Item1
@@ -2363,6 +2640,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
+						init="[west, bravo2] call BIS_fnc_addRespawnPosition;";
 						name="bravo2";
 						description="Bravo 2 - FTL";
 						isPlayable=1;
@@ -2373,6 +2651,25 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male08ENG";
+								};
+							};
+						};
+						class Attribute1
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -2391,7 +2688,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						nAttributes=2;
 					};
 				};
 				class Item1

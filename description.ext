@@ -6,13 +6,9 @@ overviewPicture = "images\Overview.jpg";
 disabledAI = 1;
 
 // Respawn + Revive
-respawn = 3; //BASE
-RespawnDelay = 30;
-respawnTemplates[] = {"Revive","Wave","Spectator","Count"};
+//respawn = 3; //BASE
+RespawnDelay = 40;
 respawnOnStart = -1;
-reviveDelay = 6;    // The time it takes to revive a unit. Will be halved if you have a Medikit. (Default: 6 seconds.)
-reviveForceRespawnDelay = 3;  // The time it takes to force your respawn while incapacitated. (Default: 3 seconds.)
-reviveBleedOutDelay = 120;  // The time it takes for a unit to bleed out. (Default: 2 minutes.)
 
 // Clean up
 corpseManagerMode = 1;
